@@ -190,12 +190,12 @@ export const HOME_FEATURE_IMAGE: ContentImage = img(
   CARD_H,
 );
 
-/** 신규 OG 준비 전 안전한 기본값 */
+/** 카카오톡/OG 공유 대표 이미지 (실제 파일 크기 1731x909) */
 export const HOME_OG_IMAGE: ContentImage = img(
-  "/icon.svg",
-  "로펌가이드",
-  64,
-  64,
+  `${THUMB}/메인-이혼전문변호사-와이드.webp`,
+  "이혼전문변호사, 어떤 기준으로 확인해야 할까요? | 로펌가이드",
+  1731,
+  909,
 );
 
 /** 메뉴·카드 이모티콘 (장식용) */

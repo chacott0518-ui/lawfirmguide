@@ -23,8 +23,8 @@ export const HOME_SEO: PageSeo = {
     "이혼전문변호사 후기",
     "이혼전문변호사 FAQ",
   ],
-  ogImage: "/icon.svg",
-  socialImage: "/icon.svg",
+  ogImage: "/images/로펌가이드/썸네일/메인-이혼전문변호사-와이드.webp",
+  socialImage: "/images/로펌가이드/썸네일/메인-이혼전문변호사-와이드.webp",
   category: SITE.categoryLabel,
 };
 
