@@ -112,6 +112,8 @@ export function ArticleTemplate({ page }: ArticleTemplateProps) {
       path: page.href,
       image: page.seo.socialImage || page.seo.ogImage,
       type: "WebPage",
+      datePublished: page.publishedAt,
+      dateModified: page.updatedAt,
     }),
     breadcrumbJsonLd([
       { name: SITE.shortName, path: "/" },
@@ -227,6 +229,7 @@ export function ArticleTemplate({ page }: ArticleTemplateProps) {
               <OfficialSourcesAccordion
                 sources={page.sources}
                 variant="editorial"
+                asDetails={page.sourcesAsDetails === true}
               />
 
               <RelatedPages currentId={page.id} variant="editorial" />

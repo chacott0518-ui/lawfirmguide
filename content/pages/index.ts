@@ -1,4 +1,5 @@
 import { CAUTION_PAGE } from "@/content/pages/caution";
+import { CONSULT_PREP_PAGE } from "@/content/pages/consult-prep";
 import { COST_PAGE } from "@/content/pages/cost";
 import { FAQ_PAGE } from "@/content/pages/faq-page";
 import { HOSPITAL_PAGE } from "@/content/pages/hospital";
@@ -7,7 +8,7 @@ import { RECOVERY_PAGE } from "@/content/pages/recovery";
 import { REVIEW_PAGE } from "@/content/pages/review";
 import type { ContentPage } from "@/types/content";
 
-/** 색인·정적 생성 대상. 7개 확정 URL만 포함한다. */
+/** 색인·정적 생성 대상. 핵심 6개 + 정보 가이드. */
 export const CONTENT_PAGES: ContentPage[] = [
   COST_PAGE,
   RECOVERY_PAGE,
@@ -15,6 +16,7 @@ export const CONTENT_PAGES: ContentPage[] = [
   HOSPITAL_PAGE,
   REVIEW_PAGE,
   FAQ_PAGE,
+  CONSULT_PREP_PAGE,
 ];
 
 export function getContentPageBySlug(slug: string): ContentPage | undefined {

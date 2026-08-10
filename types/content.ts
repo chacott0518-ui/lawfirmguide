@@ -15,6 +15,11 @@ export type ContentClusterId =
   | "faq"
   | "faqHub";
 
+/** 핵심 카드·GNB 밖의 법률정보 가이드 */
+export type InfoGuideId = "consultPrep";
+
+export type ContentPageId = ContentClusterId | InfoGuideId;
+
 export type ContentImage = {
   src: string;
   alt: string;
@@ -150,7 +155,7 @@ export type ContentCard = {
 };
 
 export type ContentPage = {
-  id: ContentClusterId;
+  id: ContentPageId;
   order: number;
   numberLabel: string;
   slug: string;
@@ -170,6 +175,10 @@ export type ContentPage = {
   lead?: string;
   /** 도입부 (보통 2문단) */
   intro: string[];
+  /** 홈 정보 카드용 짧은 주제 라벨 */
+  infoTopicLabel?: string;
+  /** 홈 정보 카드용 설명 (미설정 시 seo.description) */
+  infoCardDescription?: string;
   sections: ArticleSection[];
   faqIds: string[];
   faqTitle: string;
@@ -212,6 +221,18 @@ export type ContentPage = {
   tocDescriptions?: Record<string, string>;
   /** 공식 출처 — 비어 있으면 화면 미표시 */
   sources?: OfficialSource[];
+  /** 공식 출처를 details/summary로 렌더 (정보 가이드용) */
+  sourcesAsDetails?: boolean;
+};
+
+export type InfoGuideCard = {
+  id: InfoGuideId;
+  href: string;
+  topicLabel: string;
+  title: string;
+  description: string;
+  publishedAt: string;
+  topicName: string;
 };
 
 export type KeySummaryEntry = {

@@ -6,6 +6,7 @@ import { ArticleBody } from "@/components/content/ArticleBody";
 import { ArticleConclusion } from "@/components/content/ArticleConclusion";
 import { HomeContentCards } from "@/components/content/ContentCardGrid";
 import { FaqAccordion } from "@/components/content/FaqList";
+import { InfoGuideCards } from "@/components/content/InfoGuideCards";
 import { KeySummaryCards } from "@/components/content/KeySummaryCards";
 import { OfficialSourcesAccordion } from "@/components/content/OfficialSourcesAccordion";
 import { PageTocCards } from "@/components/content/PageTocCards";
@@ -31,6 +32,9 @@ import {
   websiteJsonLd,
 } from "@/lib/schema";
 
+/** sitemap/RSS에 이미 쓰이는 홈 기준일 — 임의 갱신하지 않음 */
+const HOME_DATE = "2026-07-31";
+
 export default function HomePage() {
   const faqs = getFaqsByIds([...HOME_FAQ_IDS]);
   const heroImage = HOME_INTRO.featureImage;
@@ -54,6 +58,8 @@ export default function HomePage() {
       <div className="cg-home cg-page--enter">
         <div className="cg-container">
           <HomeContentCards />
+
+          <InfoGuideCards />
 
           <div className="cg-article-mid-cta">
             <PartnershipCTA variant="top" />
@@ -189,6 +195,8 @@ export default function HomePage() {
             path: "/",
             image: "/icon.svg",
             type: "WebPage",
+            datePublished: HOME_DATE,
+            dateModified: HOME_DATE,
           }),
           itemListJsonLd(),
           faqPageJsonLd(faqs, "/"),

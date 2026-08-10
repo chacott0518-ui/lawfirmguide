@@ -2,6 +2,7 @@ import { HOME_OG_IMAGE } from "@/config/media";
 import { SITE } from "@/config/site";
 import { CONTENT_CARDS } from "@/lib/content-registry";
 import { ROUTES } from "@/config/routes";
+import { toIso8601Kst } from "@/lib/dates";
 import { absoluteUrl } from "@/lib/site-url";
 import type { ContentPage } from "@/types/content";
 import type { FaqItem } from "@/types/faq";
@@ -43,10 +44,19 @@ export function webPageJsonLd(options: {
   image?: string;
   keywords?: string[];
   type?: "WebPage" | "Article";
+  datePublished?: string;
+  dateModified?: string;
 }) {
   const url = absoluteUrl(options.path);
   const pageType = options.type ?? "WebPage";
   const imageSrc = options.image || DEFAULT_OG_IMAGE;
+  const datePublished = options.datePublished
+    ? toIso8601Kst(options.datePublished)
+    : undefined;
+  const dateModified = options.dateModified
+    ? toIso8601Kst(options.dateModified)
+    : datePublished;
+
   return {
     "@context": "https://schema.org",
     "@type": pageType,
@@ -60,6 +70,8 @@ export function webPageJsonLd(options: {
       "@id": absoluteUrl("/#website"),
     },
     ...(imageSrc ? { image: absoluteUrl(imageSrc) } : {}),
+    ...(datePublished ? { datePublished } : {}),
+    ...(dateModified ? { dateModified } : {}),
   };
 }
 
@@ -109,8 +121,8 @@ export function articleJsonLd(page: ContentPage) {
     headline: page.heading,
     description: page.seo.description,
     image: absoluteUrl(imageSrc),
-    datePublished: page.publishedAt,
-    dateModified: page.updatedAt,
+    datePublished: toIso8601Kst(page.publishedAt),
+    dateModified: toIso8601Kst(page.updatedAt),
     inLanguage: "ko-KR",
     articleSection: page.categoryLabel,
     author: {

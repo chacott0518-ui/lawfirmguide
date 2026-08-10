@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import { HOME_OG_IMAGE } from "@/config/media";
 import { SITE, VERIFICATION } from "@/config/site";
+import { toIso8601Kst } from "@/lib/dates";
 import { absoluteUrl } from "@/lib/site-url";
 import type { PageSeo } from "@/types/content";
 
@@ -57,6 +58,8 @@ export function buildPageMetadata({
 }: BuildMetadataOptions): Metadata {
   const url = absoluteUrl(path);
   const ogImage = resolveOgImage(seo);
+  const ogPublished = publishedTime ? toIso8601Kst(publishedTime) : undefined;
+  const ogModified = modifiedTime ? toIso8601Kst(modifiedTime) : undefined;
 
   return {
     title: {
@@ -82,8 +85,8 @@ export function buildPageMetadata({
       title: seo.title,
       description: seo.description,
       images: [ogImage],
-      ...(publishedTime ? { publishedTime } : {}),
-      ...(modifiedTime ? { modifiedTime } : {}),
+      ...(ogPublished ? { publishedTime: ogPublished } : {}),
+      ...(ogModified ? { modifiedTime: ogModified } : {}),
     },
     twitter: {
       card: "summary_large_image",

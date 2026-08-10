@@ -3,10 +3,10 @@ import Link from "next/link";
 import { LineArrow } from "@/components/icons/EditorialMarks";
 import { ROUTES } from "@/config/routes";
 import { CONTENT_CARDS } from "@/lib/content-registry";
-import type { ContentClusterId } from "@/types/content";
+import type { ContentPageId } from "@/types/content";
 
 type RelatedPagesProps = {
-  currentId?: ContentClusterId;
+  currentId?: ContentPageId;
   /** 홈: 상세 6개만 / 상세: 메인 + 나머지 5개 */
   showAll?: boolean;
   variant?: "editorial";
@@ -19,7 +19,7 @@ type RelatedLink = {
 };
 
 /** 하위페이지 → 메인("/") 문맥 앵커. 페이지마다 다른 문구를 사용하되 핵심어를 포함한다. */
-export const HOME_CONTEXT_ANCHOR: Record<ContentClusterId, string> = {
+export const HOME_CONTEXT_ANCHOR: Record<ContentPageId, string> = {
   cost: "이혼전문변호사 확인 기준",
   recovery: "이혼전문변호사 상담 기준",
   precautions: "이혼전문변호사를 확인할 때 살펴볼 기준",
@@ -27,6 +27,7 @@ export const HOME_CONTEXT_ANCHOR: Record<ContentClusterId, string> = {
   reviews: "이혼전문변호사",
   faq: "이혼전문변호사 상담 전 확인사항",
   faqHub: "이혼전문변호사 상담 전 확인사항",
+  consultPrep: "이혼전문변호사 선택 기준",
 };
 
 /**

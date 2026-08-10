@@ -1,4 +1,5 @@
 import type { FaqItem } from "@/types/faq";
+import { CONSULT_PREP_FAQS } from "@/content/faqs/consult-prep";
 
 const ALL_FAQS: FaqItem[] = [
   {
@@ -508,6 +509,7 @@ const ALL_FAQS: FaqItem[] = [
     searchType: "short",
     updatedAt: "2026-07-31",
   },
+  ...CONSULT_PREP_FAQS,
 ];
 
 export function getAllFaqs(): FaqItem[] {
