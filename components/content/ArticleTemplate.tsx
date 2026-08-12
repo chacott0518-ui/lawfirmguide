@@ -6,6 +6,7 @@ import { PartnershipCTA } from "@/components/advertising/AdInquiryBanner";
 import { ArticleBody } from "@/components/content/ArticleBody";
 import { ArticleConclusion } from "@/components/content/ArticleConclusion";
 import { ArticleIntro } from "@/components/content/ArticleIntro";
+import { Breadcrumb } from "@/components/content/Breadcrumb";
 import { FaqAccordion } from "@/components/content/FaqList";
 import { KeySummaryCards } from "@/components/content/KeySummaryCards";
 import { LongGuideImage } from "@/components/content/LongGuideImage";
@@ -19,11 +20,13 @@ import {
   HOME_CONTEXT_ANCHOR,
   RelatedPages,
 } from "@/components/content/RelatedPages";
+import { RelatedInfoGuides } from "@/components/content/RelatedInfoGuides";
 import { ClinicMap } from "@/components/contact/ClinicMap";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { HOME_FEATURE_IMAGE } from "@/config/media";
 import { ROUTES } from "@/config/routes";
 import { SITE } from "@/config/site";
+import { getRelatedInfoGuides } from "@/content/info/hub";
 import { getFaqsByIds, getPageFaqs } from "@/lib/content-registry";
 import {
   articleJsonLd,
@@ -87,6 +90,16 @@ export function ArticleTemplate({ page }: ArticleTemplateProps) {
   const bodyImage = page.bodyImage?.src ? page.bodyImage : null;
   const isFaqCanonical = page.id === "faq";
 
+  /** 신규 InfoGuide 전용 플래그(showPublishedDate)로 상단 레이아웃·FAQ 번호 표시를 분기한다. */
+  const isInfoGuide = page.showPublishedDate === true;
+  const relatedGuides = isInfoGuide ? getRelatedInfoGuides(page) : [];
+
+  function formatDisplayDate(dateValue: string): string {
+    const [y, m, d] = dateValue.split("T")[0].split("-");
+    if (!y || !m || !d) return dateValue;
+    return `${y}.${m}.${d}`;
+  }
+
   const tocItems = [
     ...page.sections.map((section) => ({
       id: section.id,
@@ -94,7 +107,7 @@ export function ArticleTemplate({ page }: ArticleTemplateProps) {
       label: section.heading,
       description: page.tocDescriptions?.[section.id],
     })),
-    ...(pageFaqs.length > 0
+    ...(pageFaqs.length > 0 && !isInfoGuide
       ? [
           {
             id: "faq",
@@ -137,6 +150,15 @@ export function ArticleTemplate({ page }: ArticleTemplateProps) {
         style={accentStyle}
       >
         <div className="cg-container">
+          {isInfoGuide ? (
+            <Breadcrumb
+              items={[
+                { label: SITE.shortName, href: "/" },
+                { label: breadcrumbLabel },
+              ]}
+            />
+          ) : null}
+
           {squareThumb ? (
             <section className="cg-article-visual" aria-label={`${displayH1} 상단 썸네일`}>
               <figure className="cg-page-thumb">
@@ -182,6 +204,19 @@ export function ArticleTemplate({ page }: ArticleTemplateProps) {
                 </p>
               ) : null}
               <h1 className="cg-home-page-intro__h1">{displayH1}</h1>
+              {isInfoGuide ? (
+                <p className="cg-home-page-intro__dates">
+                  {page.updatedAt !== page.publishedAt ? (
+                    <>
+                      게시 {formatDisplayDate(page.publishedAt)}
+                      <span aria-hidden="true"> · </span>
+                      수정 {formatDisplayDate(page.updatedAt)}
+                    </>
+                  ) : (
+                    <>게시 {formatDisplayDate(page.publishedAt)}</>
+                  )}
+                </p>
+              ) : null}
             </header>
 
             <ArticleIntro paragraphs={page.intro} />
@@ -212,10 +247,14 @@ export function ArticleTemplate({ page }: ArticleTemplateProps) {
                   items={pageFaqs}
                   title={page.faqTitle}
                   id="faq"
-                  numberLabel={faqNumberLabel}
+                  numberLabel={isInfoGuide ? undefined : faqNumberLabel}
                   className="cg-page-faq"
                   variant="editorial"
                 />
+              ) : null}
+
+              {relatedGuides.length > 0 ? (
+                <RelatedInfoGuides guides={relatedGuides} />
               ) : null}
 
               {page.conclusion ? (

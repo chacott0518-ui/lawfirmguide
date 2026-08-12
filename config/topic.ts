@@ -1,7 +1,7 @@
 import type { ClayAccent, ContentClusterId } from "@/types/content";
 
 export type MenuItemConfig = {
-  id: ContentClusterId | "home";
+  id: ContentClusterId | "home" | "infoHub";
   order: number;
   numberLabel: string;
   title: string;
@@ -99,6 +99,16 @@ export const topicConfig = {
       description: "상담·비용·선임 전 확인할 질문 정리",
       iconKey: "faq",
       accent: "neutral",
+    },
+    {
+      id: "infoHub",
+      order: 7,
+      numberLabel: "07",
+      title: "법률정보",
+      description: "상담·절차·재산·양육·증거 주제별 법률정보 가이드",
+      iconKey: "faq",
+      accent: "neutral",
+      href: "/법률정보",
     },
   ] satisfies MenuItemConfig[],
   keywordMap: {

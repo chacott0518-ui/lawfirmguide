@@ -1,5 +1,36 @@
 import type { FaqItem } from "@/types/faq";
+import { AFFAIR_CASE_FACTS_PREP_FAQS } from "@/content/faqs/affair-case-facts-prep";
+import { AFFAIR_EVIDENCE_CAUTION_FAQS } from "@/content/faqs/affair-evidence-caution";
+import { ALIMONY_CONSULT_CHECK_FAQS } from "@/content/faqs/alimony-consult-check";
+import { ANSWER_BRIEF_PREP_FAQS } from "@/content/faqs/answer-brief-prep";
+import { CASE_HANDLING_SYSTEM_CHECK_FAQS } from "@/content/faqs/case-handling-system-check";
+import { CASE_TIMELINE_CHECK_FAQS } from "@/content/faqs/case-timeline-check";
+import { CHILD_ENVIRONMENT_DOCS_FAQS } from "@/content/faqs/child-environment-docs";
+import { CHILD_SUPPORT_PREP_FAQS } from "@/content/faqs/child-support-prep";
+import { COMPLAINT_SERVICE_RESPONSE_FAQS } from "@/content/faqs/complaint-service-response";
+import { CONSULTATION_QUESTIONS_FAQS } from "@/content/faqs/consultation-questions";
+import { CONSULT_METHOD_COMPARE_FAQS } from "@/content/faqs/consult-method-compare";
 import { CONSULT_PREP_FAQS } from "@/content/faqs/consult-prep";
+import { CUSTODY_CONSULT_CHECK_FAQS } from "@/content/faqs/custody-consult-check";
+import { DEBT_DIVISION_CHECK_FAQS } from "@/content/faqs/debt-division-check";
+import { DURATION_FACTORS_FAQS } from "@/content/faqs/duration-factors";
+import { EVIDENCE_ORGANIZING_FAQS } from "@/content/faqs/evidence-organizing";
+import { FACT_CONVEY_CHECK_FAQS } from "@/content/faqs/fact-convey-check";
+import { FAMILY_RELATION_DOCS_CHECK_FAQS } from "@/content/faqs/family-relation-docs-check";
+import { INFO_HUB_EXTRA_FAQS } from "@/content/faqs/info-hub-extra";
+import { LAWYER_SELECTION_CHECK_FAQS } from "@/content/faqs/lawyer-selection-check";
+import { LITIGATION_PROCESS_FAQS } from "@/content/faqs/litigation-process";
+import { MEDIATION_PROCESS_FAQS } from "@/content/faqs/mediation-process";
+import { MESSAGE_EVIDENCE_CHECK_FAQS } from "@/content/faqs/message-evidence-check";
+import { POST_JUDGMENT_PROCESS_FAQS } from "@/content/faqs/post-judgment-process";
+import { PREMARITAL_PROPERTY_CHECK_FAQS } from "@/content/faqs/premarital-property-check";
+import { PROCEDURE_COMPARISON_FAQS } from "@/content/faqs/procedure-comparison";
+import { PROPERTY_LIST_PREP_FAQS } from "@/content/faqs/property-list-prep";
+import { REAL_ESTATE_DIVISION_DOCS_FAQS } from "@/content/faqs/real-estate-division-docs";
+import { RECORDING_EVIDENCE_CHECK_FAQS } from "@/content/faqs/recording-evidence-check";
+import { RETAINER_AGREEMENT_CHECK_FAQS } from "@/content/faqs/retainer-agreement-check";
+import { SCHEDULE_COMPARE_CHECK_FAQS } from "@/content/faqs/schedule-compare-check";
+import { VISITATION_CONSULT_CHECK_FAQS } from "@/content/faqs/visitation-consult-check";
 
 const ALL_FAQS: FaqItem[] = [
   {
@@ -510,6 +541,37 @@ const ALL_FAQS: FaqItem[] = [
     updatedAt: "2026-07-31",
   },
   ...CONSULT_PREP_FAQS,
+  ...CONSULTATION_QUESTIONS_FAQS,
+  ...CASE_TIMELINE_CHECK_FAQS,
+  ...FACT_CONVEY_CHECK_FAQS,
+  ...PROCEDURE_COMPARISON_FAQS,
+  ...MEDIATION_PROCESS_FAQS,
+  ...LITIGATION_PROCESS_FAQS,
+  ...COMPLAINT_SERVICE_RESPONSE_FAQS,
+  ...ANSWER_BRIEF_PREP_FAQS,
+  ...POST_JUDGMENT_PROCESS_FAQS,
+  ...PROPERTY_LIST_PREP_FAQS,
+  ...PREMARITAL_PROPERTY_CHECK_FAQS,
+  ...REAL_ESTATE_DIVISION_DOCS_FAQS,
+  ...DEBT_DIVISION_CHECK_FAQS,
+  ...CUSTODY_CONSULT_CHECK_FAQS,
+  ...CHILD_SUPPORT_PREP_FAQS,
+  ...VISITATION_CONSULT_CHECK_FAQS,
+  ...CHILD_ENVIRONMENT_DOCS_FAQS,
+  ...ALIMONY_CONSULT_CHECK_FAQS,
+  ...AFFAIR_CASE_FACTS_PREP_FAQS,
+  ...AFFAIR_EVIDENCE_CAUTION_FAQS,
+  ...EVIDENCE_ORGANIZING_FAQS,
+  ...MESSAGE_EVIDENCE_CHECK_FAQS,
+  ...RECORDING_EVIDENCE_CHECK_FAQS,
+  ...FAMILY_RELATION_DOCS_CHECK_FAQS,
+  ...DURATION_FACTORS_FAQS,
+  ...SCHEDULE_COMPARE_CHECK_FAQS,
+  ...LAWYER_SELECTION_CHECK_FAQS,
+  ...CONSULT_METHOD_COMPARE_FAQS,
+  ...CASE_HANDLING_SYSTEM_CHECK_FAQS,
+  ...RETAINER_AGREEMENT_CHECK_FAQS,
+  ...INFO_HUB_EXTRA_FAQS,
 ];
 
 export function getAllFaqs(): FaqItem[] {

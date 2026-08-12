@@ -1,9 +1,12 @@
+import { ROUTES } from "@/config/routes";
 import { SITE } from "@/config/site";
 import { CONTENT_PAGES } from "@/content/pages";
 import { HOME_SEO } from "@/content/pages/home";
+import { INFO_HUB_SEO } from "@/content/info/hub";
 import { absoluteUrl } from "@/lib/site-url";
 
 const HOME_PUB_DATE = "2026-07-31";
+const INFO_HUB_PUB_DATE = "2026-08-12";
 
 function escapeXml(value: string): string {
   return value
@@ -42,6 +45,13 @@ export function GET() {
         pubDate: page.publishedAt || page.updatedAt,
       };
     }),
+    {
+      title: INFO_HUB_SEO.title,
+      description: INFO_HUB_SEO.description,
+      link: absoluteUrl(ROUTES.infoHub),
+      guid: absoluteUrl(ROUTES.infoHub),
+      pubDate: INFO_HUB_PUB_DATE,
+    },
   ];
 
   const itemXml = items

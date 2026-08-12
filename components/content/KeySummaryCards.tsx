@@ -1,5 +1,3 @@
-import { MenuIcon, type MenuIconKey } from "@/components/icons/MenuIcon";
-
 export type KeySummaryItem = {
   numberLabel: string;
   title: string;
@@ -14,16 +12,9 @@ type KeySummaryCardsProps = {
   description?: string;
 };
 
-const EDITORIAL_ICONS: MenuIconKey[] = [
-  "cost",
-  "recovery",
-  "hospital",
-  "reviews",
-  "faq",
-];
-
 /**
  * 핵심요약 카드 그리드 (메인·상세 공용).
+ * 번호 + 제목은 같은 행(baseline), 설명은 다음 행 — 모바일 2줄 compact 구조.
  */
 export function KeySummaryCards({
   title = "핵심요약",
@@ -49,23 +40,14 @@ export function KeySummaryCards({
         ) : null}
       </div>
       <ol className="cg-key-summary__grid">
-        {items.map((item, index) => (
+        {items.map((item) => (
           <li key={item.numberLabel} className="cg-key-summary__card">
-            {editorial ? (
-              <span className="cg-key-summary__meta">
-                <span className="cg-key-summary__num" aria-hidden="true">
-                  {item.numberLabel}
-                </span>
-                <span className="cg-key-summary__icon" aria-hidden="true">
-                  <MenuIcon iconKey={EDITORIAL_ICONS[index] ?? "home"} size={22} />
-                </span>
-              </span>
-            ) : (
+            <span className="cg-key-summary__meta">
               <span className="cg-key-summary__num" aria-hidden="true">
                 {item.numberLabel}
               </span>
-            )}
-            <strong className="cg-key-summary__title">{item.title}</strong>
+              <strong className="cg-key-summary__title">{item.title}</strong>
+            </span>
             <p className="cg-key-summary__text">{item.text}</p>
           </li>
         ))}

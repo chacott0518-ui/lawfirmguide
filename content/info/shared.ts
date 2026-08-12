@@ -34,3 +34,6 @@ export const INFO_GUIDE_OFFICIAL_SOURCES: OfficialSource[] = [
 
 /** 신규 법률정보 가이드 최초 발행일 */
 export const INFO_GUIDE_PUBLISHED_AT = "2026-08-10";
+
+/** 2차 확장 InfoGuide 30개 최초 발행일 */
+export const INFO_GUIDE_V2_PUBLISHED_AT = "2026-08-12";

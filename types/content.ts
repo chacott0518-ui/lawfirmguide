@@ -16,7 +16,38 @@ export type ContentClusterId =
   | "faqHub";
 
 /** 핵심 카드·GNB 밖의 법률정보 가이드 */
-export type InfoGuideId = "consultPrep";
+export type InfoGuideId =
+  | "consultPrep"
+  | "consultationQuestions"
+  | "caseTimelineCheck"
+  | "factConveyCheck"
+  | "procedureComparison"
+  | "mediationProcess"
+  | "litigationProcess"
+  | "complaintServiceResponse"
+  | "answerBriefPrep"
+  | "postJudgmentProcess"
+  | "propertyListPrep"
+  | "premaritalPropertyCheck"
+  | "realEstateDivisionDocs"
+  | "debtDivisionCheck"
+  | "custodyConsultCheck"
+  | "childSupportPrep"
+  | "visitationConsultCheck"
+  | "childEnvironmentDocs"
+  | "alimonyConsultCheck"
+  | "affairCaseFactsPrep"
+  | "affairEvidenceCaution"
+  | "evidenceOrganizing"
+  | "messageEvidenceCheck"
+  | "recordingEvidenceCheck"
+  | "familyRelationDocsCheck"
+  | "durationFactors"
+  | "scheduleCompareCheck"
+  | "lawyerSelectionCheck"
+  | "consultMethodCompare"
+  | "caseHandlingSystemCheck"
+  | "retainerAgreementCheck";
 
 export type ContentPageId = ContentClusterId | InfoGuideId;
 
@@ -223,6 +254,10 @@ export type ContentPage = {
   sources?: OfficialSource[];
   /** 공식 출처를 details/summary로 렌더 (정보 가이드용) */
   sourcesAsDetails?: boolean;
+  /** H1 아래 게시·수정일 표시 여부 (신규 InfoGuide 전용, 기본 미표시) */
+  showPublishedDate?: boolean;
+  /** FAQ 다음·공식출처 이전 "다른 이혼 법률정보" 카드용 InfoGuide id (신규 InfoGuide 전용) */
+  relatedGuideIds?: InfoGuideId[];
 };
 
 export type InfoGuideCard = {
