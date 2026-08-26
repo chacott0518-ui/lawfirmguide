@@ -16,11 +16,11 @@ export const COST_PAGE: ContentPage = {
   h1: "협의이혼절차, 신청 전 어떤 내용을 확인해야 할까요?",
   heading: "협의이혼절차, 신청 전 어떤 내용을 확인해야 할까요?",
   intro: [
-    "협의이혼절차는 부부 사이에 이혼 의사와 주요 합의가 있을 때, 필요한 이혼서류와 숙려기간·신청 순서를 확인해 진행하는 절차입니다.",
+    "협의이혼절차(협의이혼 절차)는 부부 사이에 이혼 의사와 주요 합의가 있을 때, 필요한 이혼서류와 숙려기간·신청 순서를 확인해 진행하는 절차입니다.",
     "합의이혼으로 검색되는 경우에도 실제로는 합의 범위와 제출 서류, 자녀·재산 관련 정리가 먼저 필요한지 확인하는 편이 안전합니다.",
   ],
   publishedAt: "2026-07-31",
-  updatedAt: "2026-07-31",
+  updatedAt: "2026-08-26",
   faqIds: ["cost-01", "cost-02", "cost-03", "cost-04"],
   faqTitle: "협의이혼절차 FAQ",
   conclusion: [
@@ -112,7 +112,7 @@ export const COST_PAGE: ContentPage = {
         { label: "제출 방법", text: "방문·온라인 등 제출 경로 확인" },
       ],
       relatedHref: ROUTES.faq,
-      relatedLabel: "이혼전문변호사 FAQ에서 서류 관련 질문 보기",
+      relatedLabel: "이혼 상담·선임 FAQ에서 서류 관련 질문 보기",
     },
     {
       id: "cost-waiting",

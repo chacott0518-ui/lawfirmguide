@@ -28,7 +28,7 @@ export const CUSTODY_CONSULT_CHECK_PAGE: ContentPage = {
     "이 글은 양육권 상담 전 정리해 두면 도움이 되는 사항을 안내하는 일반적인 법률정보이며, 특정 조건이 있으면 양육권을 반드시 얻는다고 단정하지 않습니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "custody-consult-01",
     "custody-consult-02",
@@ -85,7 +85,7 @@ export const CUSTODY_CONSULT_CHECK_PAGE: ContentPage = {
     title: "양육권 상담 전, 무엇을 확인하나요? | 로펌가이드",
     description:
       "이혼 시 친권·양육자 지정 상담 전 정리해 두면 좋은 사항을 안내합니다.",
-    keywords: ["양육권 상담", "친권 양육권", "이혼 양육자 지정", "이혼전문변호사"],
+    keywords: ["양육권 상담", "친권 양육권", "이혼 양육자 지정"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,

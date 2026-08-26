@@ -28,7 +28,7 @@ export const PROCEDURE_COMPARISON_PAGE: ContentPage = {
     "이 글은 두 절차의 일반적인 차이를 비교한 법률정보이며, 어떤 절차가 더 유리한지를 단정하지 않습니다. 실제 진행 방향은 협의 가능 여부와 사실관계에 따라 상담에서 확인해야 합니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "proc-compare-01",
     "proc-compare-02",
@@ -85,7 +85,7 @@ export const PROCEDURE_COMPARISON_PAGE: ContentPage = {
     title: "협의이혼과 재판상 이혼, 무엇이 다른가요? | 로펌가이드",
     description:
       "협의이혼과 재판상 이혼의 요건·진행 방식 차이를 일반적인 법률정보로 비교해 안내합니다.",
-    keywords: ["협의이혼 재판상이혼 차이", "이혼전문변호사", "이혼절차", "재판상 이혼"],
+    keywords: ["협의이혼 재판상이혼 차이", "이혼절차", "재판상 이혼"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,

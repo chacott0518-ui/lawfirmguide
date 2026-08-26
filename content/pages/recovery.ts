@@ -16,11 +16,11 @@ export const RECOVERY_PAGE: ContentPage = {
   h1: "이혼소송비용, 어떤 항목을 나누어 확인해야 할까요?",
   heading: "이혼소송비용, 어떤 항목을 나누어 확인해야 할까요?",
   intro: [
-    "이혼소송비용은 변호사 보수, 인지액, 송달료와 부대비용을 항목별로 나눠 확인해야 전체 부담을 이해하기 쉽습니다.",
+    "이혼소송비용(이혼 소송 비용)은 변호사 보수, 인지액, 송달료와 부대비용을 항목별로 나눠 확인해야 전체 부담을 이해하기 쉽습니다.",
     "재판이혼비용으로 검색되는 경우에도 청구 내용과 진행 범위에 따라 구성이 달라질 수 있으므로, 총액만으로 비교하기보다 포함 항목을 질문으로 정리하는 편이 좋습니다.",
   ],
   publishedAt: "2026-07-31",
-  updatedAt: "2026-07-31",
+  updatedAt: "2026-08-26",
   faqIds: ["recovery-01", "recovery-02", "recovery-03", "recovery-04"],
   faqTitle: "이혼소송비용 FAQ",
   conclusion: [
@@ -67,11 +67,11 @@ export const RECOVERY_PAGE: ContentPage = {
   seo: {
     title: "이혼소송비용 구성과 선임 전 확인사항 | 로펌가이드",
     description:
-      "이혼소송비용을 변호사 보수, 인지액, 송달료와 부대비용으로 나누어 확인하는 방법을 안내합니다.",
+      "이혼소송비용(이혼 소송 비용)을 변호사 보수, 인지액, 송달료와 부대비용으로 나누어 확인하는 방법을 안내합니다.",
     keywords: [
       "이혼소송비용",
+      "이혼 소송 비용",
       "재판이혼비용",
-      "이혼소송절차",
       "변호사 보수",
       "인지액",
     ],
@@ -122,7 +122,7 @@ export const RECOVERY_PAGE: ContentPage = {
         },
       },
       relatedHref: ROUTES.faq,
-      relatedLabel: "이혼전문변호사 FAQ에서 비용 질문 보기",
+      relatedLabel: "이혼 상담·선임 FAQ에서 비용 질문 보기",
     },
     {
       id: "recovery-extra",
@@ -169,8 +169,8 @@ export const RECOVERY_PAGE: ContentPage = {
           { item: "정산", check: "추가 비용 사전 안내 방식" },
         ],
       },
-      relatedHref: ROUTES.reviews,
-      relatedLabel: "후기·선임 확인 기준 보기",
+      relatedHref: ROUTES.litigationProcess,
+      relatedLabel: "이혼소송절차·진행순서 확인",
     },
   ],
 };

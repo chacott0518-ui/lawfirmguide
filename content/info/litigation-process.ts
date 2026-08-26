@@ -18,17 +18,17 @@ export const LITIGATION_PROCESS_PAGE: ContentPage = {
   navLabel: "이혼소송 진행 순서",
   breadcrumbLabel: "이혼소송 진행 순서",
   categoryLabel: SITE.categoryLabel,
-  h1: "이혼소송은 어떤 순서로 진행되나요?",
-  heading: "이혼소송은 어떤 순서로 진행되나요?",
+  h1: "이혼소송절차, 어떤 순서로 진행되나요?",
+  heading: "이혼소송절차, 어떤 순서로 진행되나요?",
   infoTopicLabel: "협의·조정·소송",
   infoCardDescription:
-    "소장 제출부터 변론기일, 판결까지의 일반적인 진행 순서를 안내합니다.",
+    "이혼소송절차의 일반적인 진행순서 — 조정·소장부터 변론기일·판결까지를 안내합니다.",
   intro: [
-    "이혼소송은 소장 제출, 송달과 답변서 제출, 변론(심리)기일, 판결의 흐름으로 진행되는 경우가 많다고 알려져 있습니다. 다만 사건의 쟁점과 재판부, 당사자의 대응에 따라 실제 진행 속도와 방식은 달라질 수 있습니다.",
-    "이 글은 이혼소송의 일반적인 진행 순서를 안내하는 법률정보이며, 특정 기간이나 결과를 보장하지 않습니다.",
+    "이혼소송절차(이혼 소송 절차)는 가정법원에서 소장 제출, 송달과 답변서, 변론(심리)기일, 판결의 흐름으로 진행되는 경우가 많다고 알려져 있습니다. 다만 사건의 쟁점과 재판부, 당사자의 대응에 따라 실제 진행 속도와 방식은 달라질 수 있습니다.",
+    "재판이혼 절차에서는 조정전치주의에 따라 조정 절차를 먼저 거치는 경우가 많고, 조정이 불성립하면 소송으로 이어질 수 있습니다. 이 글은 이혼소송 진행순서의 일반적인 흐름을 안내하는 법률정보이며, 특정 기간이나 결과를 보장하지 않습니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "litigation-01",
     "litigation-02",
@@ -36,9 +36,9 @@ export const LITIGATION_PROCESS_PAGE: ContentPage = {
     "litigation-04",
     "litigation-05",
   ],
-  faqTitle: "이혼소송 진행순서 자주 묻는 질문",
+  faqTitle: "이혼소송절차·진행순서 자주 묻는 질문",
   conclusion: [
-    "이혼소송은 소장 제출, 송달·답변서, 변론기일, 판결의 흐름으로 진행되는 경우가 많으며, 단계마다 필요한 준비가 다릅니다. 실제 진행 속도는 쟁점의 다툼 정도와 재판부 사정에 따라 달라질 수 있습니다.",
+    "이혼소송절차는 조정 검토, 소장 제출, 송달·답변서, 변론기일, 판결의 흐름으로 이어지는 경우가 많으며, 단계마다 필요한 준비가 다릅니다. 실제 진행 속도는 쟁점의 다툼 정도와 재판부 사정에 따라 달라질 수 있습니다.",
     "이 글은 일반적인 법률정보 제공을 목적으로 하며 개별 사건에 대한 법률 자문을 대체하지 않습니다.",
   ],
   sources: INFO_GUIDE_OFFICIAL_SOURCES,
@@ -58,57 +58,81 @@ export const LITIGATION_PROCESS_PAGE: ContentPage = {
   showFaqHub: false,
   showPublishedDate: true,
   repeatImageBeforeSectionNumber: null,
-  relatedGuideIds: ["complaintServiceResponse", "answerBriefPrep", "postJudgmentProcess"],
+  relatedGuideIds: [
+    "mediationProcess",
+    "complaintServiceResponse",
+    "answerBriefPrep",
+    "postJudgmentProcess",
+  ],
   keySummary: [
     {
       numberLabel: "01",
-      title: "소장 제출",
-      text: "청구 취지와 원인을 담은 소장을 관할 법원에 제출합니다.",
+      title: "조정 검토",
+      text: "재판이혼 절차에서는 조정전치로 조정을 먼저 거치는 경우가 많습니다.",
     },
     {
       numberLabel: "02",
+      title: "소장 제출",
+      text: "청구 취지와 원인을 담은 소장을 관할 가정법원에 제출합니다.",
+    },
+    {
+      numberLabel: "03",
       title: "송달·답변서",
       text: "소장이 송달되면 상대방은 일정 기간 내 답변서를 제출합니다.",
     },
     {
-      numberLabel: "03",
-      title: "변론(심리)기일",
-      text: "쟁점을 심리하며 필요한 증거조사가 이뤄질 수 있습니다.",
-    },
-    {
       numberLabel: "04",
-      title: "판결",
-      text: "심리를 마치면 법원이 판결을 선고합니다.",
+      title: "변론·판결",
+      text: "변론기일에서 쟁점을 심리한 뒤 판결이 선고될 수 있습니다.",
     },
   ],
   seo: {
-    title: "이혼소송은 어떤 순서로 진행되나요? | 로펌가이드",
+    title: "이혼소송절차와 진행순서 안내 | 로펌가이드",
     description:
-      "이혼소송 소장 제출부터 변론기일, 판결까지의 일반적인 진행 순서를 안내합니다.",
-    keywords: ["이혼소송 진행순서", "이혼소송 절차", "재판상 이혼 소송", "이혼전문변호사"],
+      "이혼소송절차(이혼 소송 절차)·재판이혼 절차의 일반적인 진행순서 — 조정, 소장 제출부터 변론기일·판결까지를 안내합니다.",
+    keywords: [
+      "이혼소송절차",
+      "이혼 소송 절차",
+      "이혼소송 진행순서",
+      "재판이혼 절차",
+    ],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,
   },
   sections: [
     {
-      id: "litigation-complaint",
+      id: "litigation-mediation-first",
       order: 1,
       numberLabel: "01",
-      heading: "소장 제출 단계에서는 무엇을 하나요?",
+      heading: "이혼소송절차에서 조정은 왜 먼저 보나요?",
+      layout: "prose",
+      directAnswer:
+        "재판이혼 절차에서는 가사소송법상 조정전치주의에 따라, 본격 소송에 앞서 가정법원 조정을 거치는 경우가 많다고 알려져 있습니다. 조정이 성립하면 조서로 정리되고, 불성립하면 소송으로 이어질 수 있습니다.",
+      paragraphs: [
+        "이혼조정 신청·기일·성립·불성립의 세부 흐름은 조정 전용 안내에서 이어서 확인할 수 있습니다. 이 페이지에서는 이혼소송 진행순서의 큰 틀을 중심으로 설명합니다.",
+      ],
+      relatedHref: ROUTES.mediationProcess,
+      relatedLabel: "이혼조정절차 자세히 보기",
+    },
+    {
+      id: "litigation-complaint",
+      order: 2,
+      numberLabel: "02",
+      heading: "이혼소송절차에서 소장 제출은 어떻게 하나요?",
       layout: "prose",
       directAnswer:
         "청구 취지(이혼, 재산분할, 위자료, 친권·양육 등 요구사항)와 청구 원인(사실관계와 근거)을 담은 소장을 관할 가정법원에 제출하는 단계입니다.",
       paragraphs: [
-        "소장에는 다투고자 하는 모든 쟁점을 처음부터 정확히 담는 것이 이후 절차 진행에 도움이 될 수 있습니다. 필요한 자료를 소장 제출 전에 미리 정리해 두는 편이 좋습니다.",
+        "이혼 소송 절차에서는 다투고자 하는 쟁점을 처음부터 정확히 담는 것이 이후 진행에 도움이 될 수 있습니다. 필요한 자료를 소장 제출 전에 미리 정리해 두는 편이 좋습니다.",
       ],
       relatedHref: ROUTES.propertyListPrep,
       relatedLabel: "이혼 재산목록 정리 방법 보기",
     },
     {
       id: "litigation-service",
-      order: 2,
-      numberLabel: "02",
+      order: 3,
+      numberLabel: "03",
       heading: "송달과 답변서 단계는 어떻게 진행되나요?",
       layout: "prose",
       directAnswer:
@@ -121,8 +145,8 @@ export const LITIGATION_PROCESS_PAGE: ContentPage = {
     },
     {
       id: "litigation-hearing",
-      order: 3,
-      numberLabel: "03",
+      order: 4,
+      numberLabel: "04",
       heading: "변론기일에는 무엇이 진행되나요?",
       layout: "prose",
       directAnswer:
@@ -135,17 +159,18 @@ export const LITIGATION_PROCESS_PAGE: ContentPage = {
     },
     {
       id: "litigation-judgment",
-      order: 4,
-      numberLabel: "04",
+      order: 5,
+      numberLabel: "05",
       heading: "판결 이후에는 어떻게 되나요?",
       layout: "prose",
       directAnswer:
         "심리를 마치면 법원이 판결을 선고하며, 판결에 불복하는 경우 정해진 기간 내 항소를 검토할 수 있다고 알려져 있습니다. 판결이 확정되면 그에 따른 절차(신고 등)를 진행하게 됩니다.",
       paragraphs: [
         "판결 내용을 충분히 이해하지 못했다면 담당 변호사에게 확인하고, 항소 여부는 기간 내에 신중히 검토해야 합니다.",
+        "선택 기준·상담 준비처럼 넓은 안내는 메인 페이지에서, 비용·재산분할 등 세부 쟁점은 각 담당 페이지에서 이어서 확인할 수 있습니다.",
       ],
-      relatedHref: ROUTES.postJudgmentProcess,
-      relatedLabel: "이혼판결 후 절차 보기",
+      relatedHref: ROUTES.home,
+      relatedLabel: "이혼전문변호사 전체 안내",
     },
   ],
 };

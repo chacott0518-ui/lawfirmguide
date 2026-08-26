@@ -99,14 +99,17 @@ export function ArticleSectionBlock({
       {showNumbers && section.numberLabel ? (
         <p className="cg-article-section__num">{section.numberLabel}</p>
       ) : null}
-      <HeadingTag id={`${section.id}-heading`}>
+      {/* 장식 아이콘은 heading 밖에 두어 H2/H3 텍스트·SEO를 깨끗이 유지 */}
+      <div className="cg-article-section__heading-row">
         <span className="cg-article-section__icon" aria-hidden="true">
           {icon}
         </span>
-        <span className="cg-article-section__heading-text">
-          {section.heading}
-        </span>
-      </HeadingTag>
+        <HeadingTag id={`${section.id}-heading`}>
+          <span className="cg-article-section__heading-text">
+            {section.heading}
+          </span>
+        </HeadingTag>
+      </div>
       {section.directAnswer ? (
         <p className="cg-article-section__answer">{section.directAnswer}</p>
       ) : null}

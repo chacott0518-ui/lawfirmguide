@@ -28,7 +28,7 @@ export const CHILD_SUPPORT_PREP_PAGE: ContentPage = {
     "이 글은 양육비 상담 전 준비할 자료를 안내하는 일반적인 법률정보이며, 특정 금액을 양육비 기준으로 단정하지 않습니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "child-support-01",
     "child-support-02",
@@ -85,7 +85,7 @@ export const CHILD_SUPPORT_PREP_PAGE: ContentPage = {
     title: "양육비 상담 전, 어떤 자료를 준비하나요? | 로펌가이드",
     description:
       "이혼 양육비 상담 전 소득·지출·자녀 관련 비용 등 준비할 자료를 안내합니다.",
-    keywords: ["양육비 상담", "양육비 산정", "이혼 양육비", "이혼전문변호사"],
+    keywords: ["양육비 상담", "양육비 산정", "이혼 양육비"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,

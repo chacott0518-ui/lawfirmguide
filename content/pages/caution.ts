@@ -17,10 +17,10 @@ export const CAUTION_PAGE: ContentPage = {
   heading: "상간녀소송변호사 선임 전 무엇을 확인해야 할까요?",
   intro: [
     "상간녀소송변호사 상담 전에는 청구 요건, 확보 가능한 증거, 절차와 대응 시 주의점을 먼저 정리하는 편이 도움이 됩니다.",
-    "상간자소송·상간남소송·상간소송처럼 표현이 달라도 핵심은 사실관계와 증거를 어떻게 확인하고 절차를 진행할지입니다.",
+    "상간자소송·상간남소송·상간소송(상간 소송)처럼 표현이 달라도 핵심은 사실관계와 증거를 어떻게 확인하고 절차를 진행할지입니다.",
   ],
   publishedAt: "2026-07-31",
-  updatedAt: "2026-07-31",
+  updatedAt: "2026-08-26",
   faqIds: ["caution-01", "caution-02", "caution-03", "caution-04"],
   faqTitle: "상간소송 FAQ",
   conclusion: [
@@ -118,7 +118,7 @@ export const CAUTION_PAGE: ContentPage = {
         "추가 확보가 필요한 부분이 무엇인지",
       ],
       relatedHref: ROUTES.faq,
-      relatedLabel: "이혼전문변호사 FAQ에서 상간·위자료 질문 보기",
+      relatedLabel: "이혼 상담·선임 FAQ에서 상간·위자료 질문 보기",
     },
     {
       id: "caution-process",

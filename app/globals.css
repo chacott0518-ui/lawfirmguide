@@ -2543,17 +2543,31 @@ img {
   display: inline;
 }
 
-.cg-conclusion h2 {
+.cg-conclusion__heading-row {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.cg-article-section h2,
-.cg-article-section h3 {
+.cg-conclusion h2 {
+  display: block;
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+}
+
+.cg-article-section__heading-row {
   display: flex;
   align-items: flex-start;
   gap: 8px;
+}
+
+.cg-article-section h2,
+.cg-article-section h3 {
+  display: block;
+  flex: 1;
+  min-width: 0;
+  margin: 0;
 }
 
 .cg-article-section__heading-text {

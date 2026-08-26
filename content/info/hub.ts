@@ -178,7 +178,7 @@ export const INFO_HUB_SEO: PageSeo = {
   title: "이혼 법률정보 | 상담·절차·재산·양육 가이드 탐색 | 로펌가이드",
   description:
     "이혼 상담 준비, 협의·조정·소송 절차, 재산분할, 자녀·양육, 위자료·상간, 증거·서류, 변호사 선택까지 주제별로 정리한 이혼 법률정보 탐색 허브입니다.",
-  keywords: ["이혼 법률정보", "이혼전문변호사", "이혼변호사"],
+  keywords: ["이혼 법률정보", "이혼 절차 정보", "이혼 상담 준비"],
   ogImage: "/icon.svg",
   socialImage: "/icon.svg",
   category: SITE.categoryLabel,

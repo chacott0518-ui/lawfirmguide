@@ -28,7 +28,7 @@ export const ANSWER_BRIEF_PREP_PAGE: ContentPage = {
     "이 글은 답변서 준비 과정에서 확인할 사항을 안내하는 일반적인 법률정보이며, 답변서의 구체적인 문구나 법률적 주장은 사실관계와 증거에 따라 달라져야 합니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "answer-brief-01",
     "answer-brief-02",
@@ -85,7 +85,7 @@ export const ANSWER_BRIEF_PREP_PAGE: ContentPage = {
     title: "이혼소송 답변서, 무엇을 준비하나요? | 로펌가이드",
     description:
       "이혼소송 답변서에 담을 내용과 준비 과정에서 확인할 자료를 일반적인 법률정보로 안내합니다.",
-    keywords: ["이혼소송 답변서", "답변서 작성", "이혼소장 대응", "이혼전문변호사"],
+    keywords: ["이혼소송 답변서", "답변서 작성", "이혼소장 대응"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,

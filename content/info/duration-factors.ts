@@ -28,7 +28,7 @@ export const DURATION_FACTORS_PAGE: ContentPage = {
     "이 글은 이혼소송 기간에 영향을 줄 수 있는 요소를 안내하는 일반적인 법률정보이며, 특정 기간을 보장하지 않습니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "duration-01",
     "duration-02",
@@ -85,7 +85,7 @@ export const DURATION_FACTORS_PAGE: ContentPage = {
     title: "이혼소송 기간은 어떤 요소에 따라 달라지나요? | 로펌가이드",
     description:
       "이혼소송 기간에 영향을 주는 쟁점 다툼 정도, 증거조사 필요성 등의 요소를 안내합니다.",
-    keywords: ["이혼소송 기간", "이혼소송 소요기간", "이혼재판 기간", "이혼전문변호사"],
+    keywords: ["이혼소송 기간", "이혼소송 소요기간", "이혼재판 기간"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,

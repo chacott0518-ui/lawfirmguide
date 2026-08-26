@@ -28,7 +28,7 @@ export const CASE_HANDLING_SYSTEM_CHECK_PAGE: ContentPage = {
     "이 글은 사건 담당체계를 확인하는 방법을 안내하는 일반적인 법률정보이며, 특정 담당 방식이 더 우수하다고 단정하지 않습니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "case-handling-01",
     "case-handling-02",
@@ -85,7 +85,7 @@ export const CASE_HANDLING_SYSTEM_CHECK_PAGE: ContentPage = {
     title: "사건 담당체계는 어떻게 확인하나요? | 로펌가이드",
     description:
       "이혼소송 상담과 실제 사건 진행을 누가 담당하는지 확인하는 방법을 안내합니다.",
-    keywords: ["사건 담당체계", "변호사 담당자", "이혼소송 담당변호사", "이혼전문변호사"],
+    keywords: ["사건 담당체계", "변호사 담당자", "이혼소송 담당변호사"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,

@@ -28,7 +28,7 @@ export const EVIDENCE_ORGANIZING_PAGE: ContentPage = {
     "이 글은 증거를 정리하는 일반적인 방법을 안내하는 법률정보이며, 특정 증거의 증거능력이나 증명력을 개별적으로 판단하지 않습니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "evidence-org-01",
     "evidence-org-02",
@@ -85,7 +85,7 @@ export const EVIDENCE_ORGANIZING_PAGE: ContentPage = {
     title: "이혼소송 증거는 어떻게 정리하나요? | 로펌가이드",
     description:
       "이혼소송에서 메시지·통화·금융자료 등 증거를 정리하는 일반적인 방법을 안내합니다.",
-    keywords: ["이혼소송 증거", "이혼 증거 정리", "이혼소송 자료", "이혼전문변호사"],
+    keywords: ["이혼소송 증거", "이혼 증거 정리", "이혼소송 자료"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,

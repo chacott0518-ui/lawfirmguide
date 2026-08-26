@@ -24,11 +24,11 @@ export const LAWYER_SELECTION_CHECK_PAGE: ContentPage = {
   infoCardDescription:
     "선임 전 설명 방식, 비용 구성, 담당체계 등 확인할 기준을 안내합니다.",
   intro: [
-    "이혼변호사를 선임하기 전에는 상담 설명의 구체성, 비용 구성, 사건 담당체계, 위임계약 내용을 확인하는 것이 중요합니다. 특정 병원(로펌)이 최고라는 표현보다, 확인 항목을 기준으로 비교하는 편이 안전합니다.",
-    "이 글은 선임 전 확인할 사항을 안내하는 일반적인 법률정보이며, 특정 로펌이나 변호사를 추천하지 않습니다.",
+    "이혼변호사를 선임하기 전에는 상담에서 설명하는 방식, 비용 구성, 사건 담당체계, 위임계약 조항을 체크리스트로 확인하는 편이 안전합니다. 광고 문구만으로 비교하기보다 서명 전에 확인할 항목을 목록으로 만드는 것이 도움이 됩니다.",
+    "이 글은 선임·위임계약 전 확인 체크리스트를 안내하는 일반적인 법률정보이며, 특정 로펌이나 변호사를 추천하지 않습니다. 선택 기준의 전체 안내는 메인 페이지에서 확인할 수 있습니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "lawyer-selection-01",
     "lawyer-selection-02",
@@ -85,7 +85,7 @@ export const LAWYER_SELECTION_CHECK_PAGE: ContentPage = {
     title: "이혼변호사 선임 전, 무엇을 확인하나요? | 로펌가이드",
     description:
       "이혼변호사 선임 전 설명 방식, 비용 구성, 담당체계 등 확인할 기준을 안내합니다.",
-    keywords: ["이혼변호사 선임", "변호사 선임 기준", "이혼변호사 선택", "이혼전문변호사"],
+    keywords: ["이혼변호사 선임", "변호사 선임 기준", "위임계약 확인", "선임 전 체크리스트"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,

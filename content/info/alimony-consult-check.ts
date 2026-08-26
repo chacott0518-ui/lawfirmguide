@@ -28,7 +28,7 @@ export const ALIMONY_CONSULT_CHECK_PAGE: ContentPage = {
     "이 글은 위자료 상담 전 확인할 사항을 안내하는 일반적인 법률정보이며, 특정 사실이 있으면 반드시 위자료가 인정된다고 단정하지 않습니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "alimony-consult-01",
     "alimony-consult-02",
@@ -85,7 +85,7 @@ export const ALIMONY_CONSULT_CHECK_PAGE: ContentPage = {
     title: "이혼 위자료 상담 전, 무엇을 확인하나요? | 로펌가이드",
     description:
       "이혼 위자료 청구를 검토할 때 상담 전 정리해 두면 좋은 사항을 안내합니다.",
-    keywords: ["이혼 위자료", "위자료 상담", "위자료 청구", "이혼전문변호사"],
+    keywords: ["이혼 위자료", "위자료 상담", "위자료 청구"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,

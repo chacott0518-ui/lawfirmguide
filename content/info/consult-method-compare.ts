@@ -28,7 +28,7 @@ export const CONSULT_METHOD_COMPARE_PAGE: ContentPage = {
     "이 글은 상담 방식별 특징을 비교한 일반적인 법률정보이며, 특정 방식이 모든 사람에게 더 우수하다고 단정하지 않습니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "consult-method-01",
     "consult-method-02",
@@ -85,7 +85,7 @@ export const CONSULT_METHOD_COMPARE_PAGE: ContentPage = {
     title: "변호사 상담방식, 무엇을 비교해야 하나요? | 로펌가이드",
     description:
       "이혼변호사 대면·전화·화상 상담 방식별 특징과 확인할 점을 안내합니다.",
-    keywords: ["변호사 상담방식", "화상상담", "전화상담", "이혼전문변호사"],
+    keywords: ["변호사 상담방식", "화상상담", "전화상담"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,

@@ -16,11 +16,11 @@ export const HOSPITAL_PAGE: ContentPage = {
   h1: "이혼소송 재산분할, 대상과 비율은 어떻게 확인할까요?",
   heading: "이혼소송 재산분할, 대상과 비율은 어떻게 확인할까요?",
   intro: [
-    "이혼소송 재산분할은 대상이 되는 재산, 기여도, 특유재산과 채무를 구분해 확인해야 비율과 범위를 이해하기 쉽습니다.",
+    "이혼소송 재산분할(이혼 재산분할)은 대상이 되는 재산, 기여도, 특유재산과 채무를 구분해 확인해야 비율과 범위를 이해하기 쉽습니다.",
     "이혼사유·유책배우자 쟁점은 재산분할과 구분될 수 있는 법적 쟁점이므로, 이 페이지에서는 재산분할을 중심으로 보고 이혼사유는 보조적으로만 설명합니다.",
   ],
   publishedAt: "2026-07-31",
-  updatedAt: "2026-07-31",
+  updatedAt: "2026-08-26",
   faqIds: ["hospital-01", "hospital-02", "hospital-03", "hospital-04"],
   faqTitle: "재산분할 FAQ",
   conclusion: [
@@ -65,16 +65,15 @@ export const HOSPITAL_PAGE: ContentPage = {
     },
   ],
   seo: {
-    title: "이혼소송 재산분할 대상·비율·이혼사유 | 로펌가이드",
+    title: "이혼 재산분할 대상·비율·특유재산 확인 | 로펌가이드",
     description:
-      "이혼소송 재산분할의 대상 재산, 기여도, 채무와 특유재산을 확인하고 이혼사유와의 관계를 설명합니다.",
+      "이혼 재산분할(이혼소송 재산분할)의 대상 재산, 기여도, 채무와 특유재산을 확인하고 이혼사유와의 관계를 설명합니다.",
     keywords: [
+      "이혼 재산분할",
       "이혼소송 재산분할",
       "재산분할",
-      "위자료",
-      "이혼사유",
-      "유책배우자",
       "특유재산",
+      "유책배우자",
     ],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
@@ -119,7 +118,7 @@ export const HOSPITAL_PAGE: ContentPage = {
         "향후 생활·수입 여건에 대한 설명",
       ],
       relatedHref: ROUTES.faq,
-      relatedLabel: "이혼전문변호사 FAQ에서 재산분할 질문 보기",
+      relatedLabel: "이혼 상담·선임 FAQ에서 재산분할 질문 보기",
     },
     {
       id: "hospital-special",

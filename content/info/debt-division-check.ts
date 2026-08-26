@@ -28,7 +28,7 @@ export const DEBT_DIVISION_CHECK_PAGE: ContentPage = {
     "이 글은 채무가 있는 경우 재산분할 상담에서 확인할 사항을 안내하는 일반적인 법률정보이며, 특정 채무가 분할 대상에 포함되거나 제외된다고 단정하지 않습니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "debt-division-01",
     "debt-division-02",
@@ -85,7 +85,7 @@ export const DEBT_DIVISION_CHECK_PAGE: ContentPage = {
     title: "채무가 있는 경우 재산분할 상담, 무엇을 준비하나요? | 로펌가이드",
     description:
       "대출·카드빚 등 채무가 있는 경우 이혼 재산분할 상담에서 확인할 사항을 안내합니다.",
-    keywords: ["재산분할 채무", "이혼 빚", "재산분할 상담", "이혼전문변호사"],
+    keywords: ["재산분할 채무", "이혼 빚", "재산분할 상담"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,

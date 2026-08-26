@@ -28,7 +28,7 @@ export const RETAINER_AGREEMENT_CHECK_PAGE: ContentPage = {
     "이 글은 위임계약서를 확인할 때 참고할 수 있는 일반적인 법률정보이며, 특정 계약 조항의 유효성을 개별적으로 판단하지 않습니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "retainer-01",
     "retainer-02",
@@ -85,7 +85,7 @@ export const RETAINER_AGREEMENT_CHECK_PAGE: ContentPage = {
     title: "위임계약서, 상담 전 무엇을 확인하나요? | 로펌가이드",
     description:
       "이혼변호사 위임계약서에서 담당자, 업무 범위, 비용 조건 등 확인할 항목을 안내합니다.",
-    keywords: ["위임계약서", "변호사 계약서", "이혼변호사 계약", "이혼전문변호사"],
+    keywords: ["위임계약서", "변호사 계약서", "이혼변호사 계약"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,

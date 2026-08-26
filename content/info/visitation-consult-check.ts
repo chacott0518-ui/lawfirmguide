@@ -28,7 +28,7 @@ export const VISITATION_CONSULT_CHECK_PAGE: ContentPage = {
     "이 글은 면접교섭 상담에서 확인할 사항을 안내하는 일반적인 법률정보이며, 특정 방식이 모든 사건에 동일하게 적용된다고 단정하지 않습니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "visitation-01",
     "visitation-02",
@@ -85,7 +85,7 @@ export const VISITATION_CONSULT_CHECK_PAGE: ContentPage = {
     title: "면접교섭 상담에서는 무엇을 확인하나요? | 로펌가이드",
     description:
       "이혼 후 면접교섭 방식·빈도를 논의할 때 확인하면 좋은 사항을 안내합니다.",
-    keywords: ["면접교섭", "면접교섭권", "이혼 자녀 만남", "이혼전문변호사"],
+    keywords: ["면접교섭", "면접교섭권", "이혼 자녀 만남"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,

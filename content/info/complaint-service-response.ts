@@ -28,7 +28,7 @@ export const COMPLAINT_SERVICE_RESPONSE_PAGE: ContentPage = {
     "이 글은 소장을 송달받은 뒤 확인할 사항을 안내하는 일반적인 법률정보이며, 구체적인 대응 방향은 소장 내용과 사실관계에 따라 달라질 수 있습니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "complaint-response-01",
     "complaint-response-02",
@@ -85,7 +85,7 @@ export const COMPLAINT_SERVICE_RESPONSE_PAGE: ContentPage = {
     title: "이혼소장을 송달받았다면 어떻게 대응하나요? | 로펌가이드",
     description:
       "이혼소장을 송달받은 뒤 확인할 사항과 답변서 제출 기한을 일반적인 법률정보로 안내합니다.",
-    keywords: ["이혼소장 송달", "이혼소송 답변서", "이혼소장 대응", "이혼전문변호사"],
+    keywords: ["이혼소장 송달", "이혼소송 답변서", "이혼소장 대응"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,

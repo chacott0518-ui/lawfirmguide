@@ -28,7 +28,7 @@ export const FACT_CONVEY_CHECK_PAGE: ContentPage = {
     "이 글은 사실관계를 전달하는 일반적인 방법을 안내하는 법률정보이며, 전달 방식만으로 법률적 결과가 달라진다고 단정하지 않습니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "fact-convey-01",
     "fact-convey-02",
@@ -85,7 +85,7 @@ export const FACT_CONVEY_CHECK_PAGE: ContentPage = {
     title: "이혼변호사 상담에서 사실관계는 어떻게 전달하나요? | 로펌가이드",
     description:
       "이혼변호사 상담에서 감정적 서술과 사실을 구분해 명확하게 전달하는 방법을 안내합니다.",
-    keywords: ["이혼변호사 상담", "사실관계 전달", "이혼상담 준비", "이혼전문변호사 상담"],
+    keywords: ["이혼변호사 상담", "사실관계 전달", "이혼상담 준비"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,

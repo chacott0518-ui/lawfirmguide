@@ -28,7 +28,7 @@ export const AFFAIR_CASE_FACTS_PREP_PAGE: ContentPage = {
     "이 글은 상간 관련 사실관계를 정리하는 방법을 안내하는 일반적인 법률정보이며, 정리한 사실만으로 법률적 결과를 단정하지 않습니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "affair-facts-01",
     "affair-facts-02",
@@ -85,7 +85,7 @@ export const AFFAIR_CASE_FACTS_PREP_PAGE: ContentPage = {
     title: "상간 관련 사실관계, 상담 전 어떻게 정리하나요? | 로펌가이드",
     description:
       "상간 관련 상담 전 시기·경위·자료를 사실과 추측으로 구분해 정리하는 방법을 안내합니다.",
-    keywords: ["상간 사실관계", "상간소송 상담", "상간자소송", "이혼전문변호사"],
+    keywords: ["상간 사실관계", "상간소송 상담", "상간자소송"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,

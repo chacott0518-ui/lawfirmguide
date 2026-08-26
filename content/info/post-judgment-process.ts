@@ -28,7 +28,7 @@ export const POST_JUDGMENT_PROCESS_PAGE: ContentPage = {
     "이 글은 판결 이후 확인할 절차를 안내하는 일반적인 법률정보이며, 판결 확정 여부나 항소 결과를 예측하지 않습니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "post-judgment-01",
     "post-judgment-02",
@@ -85,7 +85,7 @@ export const POST_JUDGMENT_PROCESS_PAGE: ContentPage = {
     title: "이혼 판결 후에는 어떤 절차가 남아있나요? | 로펌가이드",
     description:
       "이혼판결 확정, 이혼신고, 항소 검토까지 판결 이후 확인할 절차를 안내합니다.",
-    keywords: ["이혼판결 후 절차", "이혼신고", "이혼소송 항소", "이혼전문변호사"],
+    keywords: ["이혼판결 후 절차", "이혼신고", "이혼소송 항소"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,

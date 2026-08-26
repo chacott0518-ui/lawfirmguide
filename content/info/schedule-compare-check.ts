@@ -28,7 +28,7 @@ export const SCHEDULE_COMPARE_CHECK_PAGE: ContentPage = {
     "이 글은 조정과 소송의 일정상 일반적인 차이를 비교한 법률정보이며, 특정 소요 기간을 보장하지 않습니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "schedule-compare-01",
     "schedule-compare-02",
@@ -85,7 +85,7 @@ export const SCHEDULE_COMPARE_CHECK_PAGE: ContentPage = {
     title: "조정과 소송, 일정 차이는 어떻게 확인하나요? | 로펌가이드",
     description:
       "이혼 조정기일과 변론기일의 진행 방식과 일정 차이를 비교해 안내합니다.",
-    keywords: ["조정 소송 일정", "이혼조정 기간", "이혼소송 일정", "이혼전문변호사"],
+    keywords: ["조정 소송 일정", "이혼조정 기간", "이혼소송 일정"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,

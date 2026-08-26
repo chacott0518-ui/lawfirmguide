@@ -28,7 +28,7 @@ export const RECORDING_EVIDENCE_CHECK_PAGE: ContentPage = {
     "이 글은 녹음자료를 상담에서 다룰 때 확인할 사항을 안내하는 일반적인 법률정보이며, 특정 녹음의 적법성이나 증거능력을 개별적으로 판단하지 않습니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "recording-evidence-01",
     "recording-evidence-02",
@@ -85,7 +85,7 @@ export const RECORDING_EVIDENCE_CHECK_PAGE: ContentPage = {
     title: "녹음자료, 상담 전 무엇을 확인하나요? | 로펌가이드",
     description:
       "이혼소송에서 대화 녹음 자료를 상담에서 다룰 때 확인할 사항을 안내합니다.",
-    keywords: ["녹음 증거", "대화 녹음 이혼", "통신비밀보호법", "이혼전문변호사"],
+    keywords: ["녹음 증거", "대화 녹음 이혼", "통신비밀보호법"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,

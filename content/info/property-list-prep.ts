@@ -28,7 +28,7 @@ export const PROPERTY_LIST_PREP_PAGE: ContentPage = {
     "이 글은 재산목록을 정리하는 일반적인 방법을 안내하는 법률정보이며, 정리한 재산이 모두 분할 대상이 된다고 단정하지 않습니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "property-list-01",
     "property-list-02",
@@ -85,7 +85,7 @@ export const PROPERTY_LIST_PREP_PAGE: ContentPage = {
     title: "이혼 재산목록, 어떻게 정리하나요? | 로펌가이드",
     description:
       "이혼 재산분할 상담 전 부동산·금융자산·퇴직급여 등 재산 항목을 정리하는 방법을 안내합니다.",
-    keywords: ["이혼 재산목록", "재산분할 준비", "이혼 재산분할", "이혼전문변호사"],
+    keywords: ["이혼 재산목록", "재산분할 준비", "이혼 재산분할"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,

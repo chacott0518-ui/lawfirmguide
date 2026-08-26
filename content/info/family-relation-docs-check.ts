@@ -28,7 +28,7 @@ export const FAMILY_RELATION_DOCS_CHECK_PAGE: ContentPage = {
     "이 글은 가족관계·혼인관계 서류를 준비하는 일반적인 방법을 안내하는 법률정보이며, 사건마다 필요한 서류는 달라질 수 있습니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "family-docs-01",
     "family-docs-02",
@@ -85,7 +85,7 @@ export const FAMILY_RELATION_DOCS_CHECK_PAGE: ContentPage = {
     title: "가족관계·혼인관계 서류, 무엇을 미리 확인하나요? | 로펌가이드",
     description:
       "이혼 절차에서 필요한 가족관계증명서·혼인관계증명서 등 기본 서류 준비 방법을 안내합니다.",
-    keywords: ["가족관계증명서", "혼인관계증명서", "이혼 서류", "이혼전문변호사"],
+    keywords: ["가족관계증명서", "혼인관계증명서", "이혼 서류"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,

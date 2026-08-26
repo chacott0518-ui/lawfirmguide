@@ -28,7 +28,7 @@ export const CHILD_ENVIRONMENT_DOCS_PAGE: ContentPage = {
     "이 글은 자녀 양육환경 자료를 정리하는 방법을 안내하는 일반적인 법률정보이며, 특정 환경 요소가 결과를 자동으로 결정한다고 단정하지 않습니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "child-env-01",
     "child-env-02",
@@ -85,7 +85,7 @@ export const CHILD_ENVIRONMENT_DOCS_PAGE: ContentPage = {
     title: "자녀 양육환경 자료, 어떻게 정리하나요? | 로펌가이드",
     description:
       "이혼 시 자녀의 거주·학교·보육 환경 등 양육환경 관련 자료를 정리하는 방법을 안내합니다.",
-    keywords: ["양육환경", "자녀 양육환경 자료", "이혼 자녀", "이혼전문변호사"],
+    keywords: ["양육환경", "자녀 양육환경 자료", "이혼 자녀"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,

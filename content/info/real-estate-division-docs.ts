@@ -28,7 +28,7 @@ export const REAL_ESTATE_DIVISION_DOCS_PAGE: ContentPage = {
     "이 글은 부동산 재산분할과 관련해 준비할 수 있는 자료를 안내하는 일반적인 법률정보이며, 부동산의 분할 대상 해당 여부나 분할 비율을 단정하지 않습니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "real-estate-01",
     "real-estate-02",
@@ -85,7 +85,7 @@ export const REAL_ESTATE_DIVISION_DOCS_PAGE: ContentPage = {
     title: "부동산 재산분할, 어떤 자료를 준비하나요? | 로펌가이드",
     description:
       "이혼 재산분할에서 부동산 관련 등기부등본, 대출 서류 등 준비할 자료를 안내합니다.",
-    keywords: ["부동산 재산분할", "이혼 부동산", "재산분할 자료", "이혼전문변호사"],
+    keywords: ["부동산 재산분할", "이혼 부동산", "재산분할 자료"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,

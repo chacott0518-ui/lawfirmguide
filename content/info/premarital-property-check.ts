@@ -28,7 +28,7 @@ export const PREMARITAL_PROPERTY_CHECK_PAGE: ContentPage = {
     "이 글은 혼인 전 재산을 이혼 상담에서 어떻게 확인·설명하면 좋은지 안내하는 일반적인 법률정보이며, 특정 재산이 분할 대상에서 제외된다고 단정하지 않습니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "premarital-01",
     "premarital-02",
@@ -85,7 +85,7 @@ export const PREMARITAL_PROPERTY_CHECK_PAGE: ContentPage = {
     title: "혼인 전 재산, 이혼 시 어떻게 확인하나요? | 로펌가이드",
     description:
       "혼인 전 형성한 재산을 이혼 상담에서 어떻게 확인·설명하면 좋은지 안내합니다.",
-    keywords: ["혼인 전 재산", "특유재산", "이혼 재산분할", "이혼전문변호사"],
+    keywords: ["혼인 전 재산", "특유재산", "이혼 재산분할"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,

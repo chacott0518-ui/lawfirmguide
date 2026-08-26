@@ -169,7 +169,7 @@ export const REVIEW_PAGE: ContentPage = {
         { label: "담당", text: "담당 변호사와 연락 창구" },
       ],
       relatedHref: ROUTES.faq,
-      relatedLabel: "이혼전문변호사 FAQ 전체 보기",
+      relatedLabel: "이혼 상담·선임 FAQ 전체 보기",
     },
   ],
 };

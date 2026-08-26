@@ -28,7 +28,7 @@ export const MESSAGE_EVIDENCE_CHECK_PAGE: ContentPage = {
     "이 글은 메신저·문자 자료를 증거로 정리할 때 확인할 사항을 안내하는 일반적인 법률정보이며, 특정 대화의 증거능력을 개별적으로 판단하지 않습니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "message-evidence-01",
     "message-evidence-02",
@@ -85,7 +85,7 @@ export const MESSAGE_EVIDENCE_CHECK_PAGE: ContentPage = {
     title: "카카오톡·문자 자료, 증거로 정리할 때 무엇을 확인하나요? | 로펌가이드",
     description:
       "이혼소송에서 카카오톡·문자 등 메신저 대화를 증거로 정리할 때 확인할 사항을 안내합니다.",
-    keywords: ["카카오톡 증거", "문자 증거", "메신저 증거", "이혼전문변호사"],
+    keywords: ["카카오톡 증거", "문자 증거", "메신저 증거"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,

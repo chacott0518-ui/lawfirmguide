@@ -18,6 +18,7 @@ import { SITE } from "@/config/site";
 import { getFaqsByIds } from "@/content/faqs";
 import {
   HOME_CONCLUSION,
+  HOME_CONCLUSION_HEADING,
   HOME_FAQ_IDS,
   HOME_INTRO,
   HOME_SECTIONS,
@@ -32,8 +33,10 @@ import {
   websiteJsonLd,
 } from "@/lib/schema";
 
-/** sitemap/RSS에 이미 쓰이는 홈 기준일 — 임의 갱신하지 않음 */
-const HOME_DATE = "2026-07-31";
+/** sitemap/RSS·JSON-LD published 기준일 — publishedAt 변경 금지 */
+const HOME_DATE_PUBLISHED = "2026-07-31";
+/** 이번 본문·DOM 최적화 반영일 */
+const HOME_DATE_MODIFIED = "2026-08-26";
 
 export default function HomePage() {
   const faqs = getFaqsByIds([...HOME_FAQ_IDS]);
@@ -57,48 +60,6 @@ export default function HomePage() {
     <>
       <div className="cg-home cg-page--enter">
         <div className="cg-container">
-          <HomeContentCards />
-
-          <InfoGuideCards />
-
-          <div className="cg-article-mid-cta">
-            <PartnershipCTA variant="top" />
-          </div>
-
-          {heroImage?.src ? (
-            <section className="cg-home-hero" aria-label="로펌가이드 대표 이미지">
-              <Image
-                src={heroImage.src}
-                alt={heroImage.alt}
-                width={heroImage.width}
-                height={heroImage.height}
-                priority
-                sizes="(max-width: 768px) 100vw, 1120px"
-                className="cg-home-hero__img"
-              />
-            </section>
-          ) : null}
-
-          <section
-            className="cg-editorial-grid"
-            aria-label="이혼 법률정보 보조 이미지"
-          >
-            {editorialImages.map((image) => (
-              <figure key={image.src} className="cg-editorial-grid__item">
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  width={image.width}
-                  height={image.height}
-                  sizes="(max-width: 768px) 100vw, 540px"
-                  className="cg-editorial-grid__img"
-                />
-              </figure>
-            ))}
-          </section>
-
-          <ClinicMap />
-
           <div className="home-editorial">
             <header className="cg-home-page-intro">
               <p className="cg-home-page-intro__eyebrow">로펌가이드</p>
@@ -163,7 +124,7 @@ export default function HomePage() {
 
             <FaqAccordion
               items={faqs}
-              title="이혼 자주 묻는 질문"
+              title="이혼변호사에게 자주 묻는 질문"
               id="faq"
               numberLabel="07"
               className="cg-main-faq"
@@ -171,7 +132,7 @@ export default function HomePage() {
             />
 
             <ArticleConclusion
-              heading="이혼 정보를 확인할 때 마지막으로 점검할 점"
+              heading={HOME_CONCLUSION_HEADING}
               body={HOME_CONCLUSION}
               variant="editorial"
             />
@@ -180,6 +141,48 @@ export default function HomePage() {
 
             <RelatedPages showAll variant="editorial" />
           </div>
+
+          <HomeContentCards />
+
+          <InfoGuideCards />
+
+          <div className="cg-article-mid-cta">
+            <PartnershipCTA variant="top" />
+          </div>
+
+          {heroImage?.src ? (
+            <section className="cg-home-hero" aria-label="로펌가이드 대표 이미지">
+              <Image
+                src={heroImage.src}
+                alt={heroImage.alt}
+                width={heroImage.width}
+                height={heroImage.height}
+                priority
+                sizes="(max-width: 768px) 100vw, 1120px"
+                className="cg-home-hero__img"
+              />
+            </section>
+          ) : null}
+
+          <section
+            className="cg-editorial-grid"
+            aria-label="이혼 법률정보 보조 이미지"
+          >
+            {editorialImages.map((image) => (
+              <figure key={image.src} className="cg-editorial-grid__item">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={image.width}
+                  height={image.height}
+                  sizes="(max-width: 768px) 100vw, 540px"
+                  className="cg-editorial-grid__img"
+                />
+              </figure>
+            ))}
+          </section>
+
+          <ClinicMap />
 
           <PartnershipCTA variant="bottom" />
         </div>
@@ -195,8 +198,8 @@ export default function HomePage() {
             path: "/",
             image: "/icon.svg",
             type: "WebPage",
-            datePublished: HOME_DATE,
-            dateModified: HOME_DATE,
+            datePublished: HOME_DATE_PUBLISHED,
+            dateModified: HOME_DATE_MODIFIED,
           }),
           itemListJsonLd(),
           faqPageJsonLd(faqs, "/"),

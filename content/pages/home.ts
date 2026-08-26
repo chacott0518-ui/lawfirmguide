@@ -32,11 +32,12 @@ export const HOME_INTRO: HomeIntro = {
   h1: "이혼전문변호사, 어떤 기준으로 확인해야 할까요?",
   subtitle:
     "협의이혼절차, 이혼소송비용, 상간소송, 재산분할과 후기 확인 기준을 정리한 법률정보 안내 사이트",
-  heading: "이혼 사건을 검토할 때 무엇을 먼저 나눠 보면 좋을까요?",
+  heading: "이혼전문변호사를 찾을 때 무엇을 먼저 나눠 보면 좋을까요?",
   featureImage: HOME_WIDE_IMAGE,
   paragraphs: [
-    "이혼전문변호사를 찾기 전에는 절차 유형, 비용 구성, 재산분할·상간소송 쟁점, 선임 전 확인 항목을 주제별로 정리해 두는 편이 비교에 도움이 됩니다.",
-    "로펌가이드는 특정 법무법인의 공식 홈페이지가 아닌 법률정보 안내 사이트이며, 실제 대응 방법과 결과는 사실관계·증거·적용 법령에 따라 달라질 수 있습니다.",
+    "이혼전문변호사를 찾을 때는 협의이혼·조정·재판이혼처럼 절차가 달라질 수 있는지, 재산분할·위자료·양육 쟁점이 있는지를 먼저 정리하는 편이 도움이 됩니다.",
+    "이혼 전문 변호사를 비교할 때는 사건 경험과 상담에서 설명하는 방식을 함께 보고, 이혼변호사 상담에서는 비용 구조와 위임 범위까지 확인하는 것이 안전합니다.",
+    "로펌가이드는 특정 법무법인의 공식 홈페이지가 아닌 법률정보 안내 사이트이며, 실제 대응 방법과 결과는 사실관계·증거·적용 법령에 따라 달라질 수 있습니다. 세부 절차·비용·쟁점은 아래 주제 페이지에서 이어서 확인할 수 있습니다.",
   ],
   summary:
     "절차·비용·쟁점·후기 확인 기준을 나눠 보면 상담 전 질문 목록을 만들기 쉽습니다.",
@@ -72,8 +73,11 @@ export const HOME_INTRO: HomeIntro = {
 export const HOME_EXAM_NOTICE =
   "본 사이트의 정보는 일반적인 법률정보 제공을 위한 것이며, 구체적인 사건에 대한 법률 자문이나 결과를 보장하지 않습니다.";
 
+export const HOME_CONCLUSION_HEADING =
+  "이혼전문변호사 선택 전 마지막 확인";
+
 export const HOME_CONCLUSION = [
-  "이혼 관련 정보는 단일 키워드보다 절차, 비용, 재산분할, 상간소송, 후기 확인 기준을 함께 보면 비교가 쉬워집니다.",
+  "이혼전문변호사를 선택할 때는 단일 표현보다 절차, 비용, 재산분할, 상간소송, 후기 확인 기준을 함께 보면 판단이 쉬워집니다.",
   "특정 결과를 보장하는 표현보다, 사실관계와 증거를 기준으로 설명할 수 있는지 확인하는 편이 안전합니다.",
 ];
 
@@ -118,7 +122,7 @@ export const HOME_INDEX: HomeIndexItem[] = [
   {
     order: 6,
     numberLabel: "06",
-    title: "이혼전문변호사 FAQ",
+    title: "이혼 상담·선임 FAQ",
     description: "상담·비용·선임 전 확인할 질문",
     href: ROUTES.faq,
   },
@@ -128,25 +132,25 @@ export const HOME_TOC = [
   {
     id: "home-cost",
     numberLabel: "01",
-    label: "협의이혼 절차",
+    label: "이혼전문변호사 상담 전 협의이혼 절차",
     description: "신청 전 확인할 내용",
   },
   {
     id: "home-recovery",
     numberLabel: "02",
-    label: "이혼소송 비용",
+    label: "이혼 전문 변호사 상담 전 비용",
     description: "비용 항목을 나누는 기준",
   },
   {
     id: "home-precautions",
     numberLabel: "03",
-    label: "상간소송 변호사",
+    label: "이혼소송 변호사와 상간소송",
     description: "증거와 절차 확인 포인트",
   },
   {
     id: "home-hospital",
     numberLabel: "04",
-    label: "이혼 재산분할",
+    label: "이혼변호사 상담 전 재산분할",
     description: "대상과 비율 확인 기준",
   },
   {
@@ -158,13 +162,13 @@ export const HOME_TOC = [
   {
     id: "home-faq",
     numberLabel: "06",
-    label: "이혼전문변호사 FAQ",
+    label: "이혼 상담·선임 FAQ",
     description: "상담·선임 전 확인할 질문",
   },
   {
     id: "faq",
     numberLabel: "07",
-    label: "이혼 자주 묻는 질문",
+    label: "이혼변호사에게 자주 묻는 질문",
     description: "절차·비용·양육 관련 질문",
   },
 ];
@@ -174,14 +178,15 @@ export const HOME_SECTIONS: ArticleSection[] = [
     id: "home-cost",
     order: 1,
     numberLabel: "01",
-    heading: "협의이혼 절차",
+    heading: "이혼전문변호사 상담 전 협의이혼 절차",
     layout: "steps",
     directAnswer:
       "협의이혼절차는 부부 합의가 있을 때 서류 준비, 합의사항 정리, 숙려기간과 신청 순서를 단계별로 확인하는 과정입니다. 각 단계에서 무엇을 준비해야 하는지 미리 파악해두면 실제 진행 과정에서 시행착오를 줄일 수 있습니다.",
     paragraphs: [
       "이혼서류와 합의 내용이 정리되지 않은 상태에서 진행만 서두르면 이후 분쟁으로 이어질 수 있어, 신청 전 확인 항목을 목록으로 만드는 편이 좋습니다.",
+      "합의가 어렵거나 쟁점이 크면 조정·재판이혼으로 이어질 수 있으므로, 협의이혼 절차만으로 모든 사건을 단정하지 않는 편이 안전합니다.",
       "실제 준비 과정에서는 협의 내용을 문서로 정리해두었는지, 자녀가 있는 경우 양육사항 합의서를 함께 준비했는지 먼저 확인해보는 것이 도움이 됩니다.",
-      "숙려기간 중에도 궁금한 점이 생기면 관할 법원이나 상담 창구를 통해 진행 절차를 다시 확인할 수 있습니다.",
+      "이혼소송절차의 일반적인 진행순서는 별도 안내에서 확인할 수 있으며, 이혼 소송 절차의 세부 단계는 소장·송달·변론·판결 흐름을 기준으로 보면 이해가 쉽습니다.",
     ],
     steps: [
       {
@@ -208,7 +213,7 @@ export const HOME_SECTIONS: ArticleSection[] = [
     id: "home-recovery",
     order: 2,
     numberLabel: "02",
-    heading: "이혼소송 비용",
+    heading: "이혼 전문 변호사 상담 전 이혼소송 비용",
     layout: "info-grid",
     directAnswer:
       "이혼소송비용은 변호사 보수, 인지액, 송달료와 부대비용을 나눠 확인해야 전체 부담을 이해하기 쉽습니다. 항목마다 성격이 달라 포함 범위와 발생 조건을 구분해서 확인하는 편이 상담에서 질문을 준비하기에도 수월합니다.",
@@ -219,7 +224,7 @@ export const HOME_SECTIONS: ArticleSection[] = [
     ],
     infoBlocks: [
       {
-        label: "변호사 보수",
+        label: "이혼변호사 보수",
         text: "착수금·성공보수·추가 업무 범위 설명 여부",
       },
       { label: "인지액", text: "청구 내용에 따라 달라질 수 있는 항목" },
@@ -236,7 +241,7 @@ export const HOME_SECTIONS: ArticleSection[] = [
     id: "home-precautions",
     order: 3,
     numberLabel: "03",
-    heading: "상간소송 변호사",
+    heading: "이혼소송 변호사 상담 전 상간소송 확인",
     layout: "checklist",
     directAnswer:
       "상간녀소송변호사 상담 전에는 청구 요건, 확보 가능한 증거, 절차와 대응 시 주의점을 먼저 정리하는 편이 도움이 됩니다. 감정적으로 접근하기보다 사실관계와 증거를 기준으로 차분히 정리해두면 상담에서 더 정확한 설명을 받을 수 있습니다.",
@@ -258,7 +263,7 @@ export const HOME_SECTIONS: ArticleSection[] = [
     id: "home-hospital",
     order: 4,
     numberLabel: "04",
-    heading: "이혼 재산분할",
+    heading: "이혼변호사 상담 전 재산분할 확인",
     layout: "info-blocks",
     directAnswer:
       "이혼소송 재산분할은 대상 재산, 기여도, 특유재산과 채무를 구분해 확인해야 비율과 범위를 이해하기 쉽습니다. 항목별로 나눠 보지 않으면 실제 협의나 소송 과정에서 놓치는 부분이 생길 수 있어 미리 목록화해 두는 것이 좋습니다.",
@@ -270,7 +275,7 @@ export const HOME_SECTIONS: ArticleSection[] = [
     infoBlocks: [
       { label: "대상 재산", text: "부부 공동재산으로 볼 수 있는 범위" },
       { label: "기여도", text: "형성·유지에 대한 기여 설명 방식" },
-      { label: "특유재산", text: "혼인 전 재산 등 제외 가능성" },
+      { label: "이혼 전문 변호사 상담 시 특유재산", text: "혼인 전 재산 등 제외 가능성" },
       { label: "채무", text: "공동 채무와 개인 채무 구분" },
     ],
     relatedHref: ROUTES.hospital,
@@ -280,7 +285,7 @@ export const HOME_SECTIONS: ArticleSection[] = [
     id: "home-reviews",
     order: 5,
     numberLabel: "05",
-    heading: "이혼전문변호사 후기",
+    heading: "이혼전문변호사 후기 확인 기준",
     layout: "comparison",
     directAnswer:
       "이혼전문변호사 후기는 상담 설명의 구체성, 사건 진행 방식, 비용 설명과 과장된 표현을 구분해서 읽는 편이 안전합니다. 결과를 단정하는 후기보다 절차와 소통 방식을 구체적으로 설명하는 후기를 참고하는 편이 실질적인 판단에 도움이 됩니다.",
@@ -291,7 +296,7 @@ export const HOME_SECTIONS: ArticleSection[] = [
     ],
     comparison: {
       left: {
-        label: "참고할 내용",
+        label: "이혼변호사 후기에서 참고할 내용",
         text: "상담 질문 대응, 절차 설명, 비용 구성 안내, 진행 보고 방식",
       },
       right: {
@@ -306,10 +311,10 @@ export const HOME_SECTIONS: ArticleSection[] = [
     id: "home-faq",
     order: 6,
     numberLabel: "06",
-    heading: "이혼전문변호사 FAQ",
+    heading: "이혼 상담·선임 FAQ로 확인할 점",
     layout: "checklist",
     directAnswer:
-      "이혼전문변호사 FAQ에서는 상담·선임 기준과 함께 협의이혼·서류, 소송 비용과 기간, 상간소송, 재산분할, 양육비·친권·사실혼처럼 자주 이어지는 질문을 묶어 확인할 수 있습니다. 주제별로 나눠 보면 상담 전 어떤 부분을 더 자세히 물어봐야 하는지 스스로 정리하는 데 도움이 됩니다.",
+      "이혼 상담·선임 FAQ에서는 상담 준비, 비용 확인, 위임계약, 후기·광고 표현처럼 선임 전후에 자주 이어지는 질문을 묶어 확인할 수 있습니다. 주제별로 나눠 보면 상담 전 어떤 부분을 더 자세히 물어봐야 하는지 스스로 정리하는 데 도움이 됩니다.",
     paragraphs: [
       "한 페이지의 답변만으로 개별 사건을 판단하기 어려우므로, 관련 주제 페이지와 함께 질문 목록을 만드는 편이 효율적입니다.",
       "질문 목록을 미리 정리해두면 상담 시간을 절차·비용·쟁점별로 나눠 효율적으로 활용할 수 있습니다.",
@@ -323,7 +328,7 @@ export const HOME_SECTIONS: ArticleSection[] = [
       "양육비·친권·사실혼 기준은 무엇인지",
     ],
     relatedHref: ROUTES.faq,
-    relatedLabel: "이혼전문변호사 FAQ 확인",
+    relatedLabel: "이혼 상담·선임 FAQ 확인",
   },
 ];
 
@@ -446,10 +451,10 @@ export const CONTENT_CARDS: ContentCard[] = [
     "06",
     "faq",
     ROUTES.faq,
-    "이혼전문변호사 FAQ",
-    "이혼전문변호사 FAQ",
+    "이혼 상담·선임 FAQ",
+    "이혼 상담·선임 FAQ",
     "상담·비용·선임 전 확인할 질문 정리",
-    "이혼전문변호사 상담과 위임계약 전에 확인할 질문을 중심으로, 협의이혼·비용·재산분할·상간소송 관련 질문도 함께 정리합니다.",
+    "이혼 상담과 위임계약 전에 확인할 질문을 중심으로, 협의이혼·비용·재산분할·상간소송 관련 질문도 함께 정리합니다.",
     [...HOME_FAQ_IDS],
   ),
 ];

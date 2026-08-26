@@ -82,7 +82,7 @@ function toInfoCard(page: ContentPage): InfoGuideCard {
 const HOME_INFO_GUIDE_IDS: InfoGuideId[] = [
   "consultPrep",
   "consultationQuestions",
-  "evidenceOrganizing",
+  "litigationProcess",
   "lawyerSelectionCheck",
 ];
 

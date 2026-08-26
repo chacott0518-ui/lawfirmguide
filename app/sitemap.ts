@@ -4,8 +4,9 @@ import { ROUTES } from "@/config/routes";
 import { CONTENT_PAGES } from "@/content/pages";
 import { absoluteUrl } from "@/lib/site-url";
 
-const HOME_LAST_MODIFIED = "2026-07-31";
-const INFO_HUB_LAST_MODIFIED = "2026-08-12";
+/** sitemap/RSS에 반영하는 홈 lastmod — 본문·DOM 최적화 반영일 */
+const HOME_LAST_MODIFIED = "2026-08-26";
+const INFO_HUB_LAST_MODIFIED = "2026-08-26";
 
 /** 색인 대상: 홈 + 핵심 6개 + 정보가이드 31개 + 법률정보 허브. redirect·칼럼 URL 제외 */
 export default function sitemap(): MetadataRoute.Sitemap {

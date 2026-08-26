@@ -29,7 +29,7 @@ export const CONSULT_PREP_PAGE: ContentPage = {
     "전체 확인 흐름은 이혼전문변호사 선택 기준을 다루는 메인 안내와 함께 보면, 상담 전 질문과 자료 준비 방향을 나누어 정리하기 쉽습니다.",
   ],
   publishedAt: INFO_GUIDE_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "consult-prep-01",
     "consult-prep-02",
@@ -236,7 +236,7 @@ export const CONSULT_PREP_PAGE: ContentPage = {
         "긴급히 검토해야 할 조치가 있는가?",
       ],
       relatedHref: ROUTES.faq,
-      relatedLabel: "이혼전문변호사 FAQ 보기",
+      relatedLabel: "이혼 상담·선임 FAQ 보기",
     },
     {
       id: "prep-caution",

@@ -17,14 +17,21 @@ export function ArticleConclusion({
       className={`cg-conclusion${editorial ? " is-editorial" : ""}`}
       aria-labelledby="article-conclusion"
     >
-      <h2 id="article-conclusion">
-        {editorial ? null : (
+      {editorial ? null : (
+        <div className="cg-conclusion__heading-row">
           <span className="cg-conclusion__icon" aria-hidden="true">
             ✅
           </span>
-        )}
-        <span>{heading}</span>
-      </h2>
+          <h2 id="article-conclusion">
+            <span>{heading}</span>
+          </h2>
+        </div>
+      )}
+      {editorial ? (
+        <h2 id="article-conclusion">
+          <span>{heading}</span>
+        </h2>
+      ) : null}
       {paragraphs.map((paragraph) => (
         <p key={paragraph.slice(0, 40)}>{paragraph}</p>
       ))}

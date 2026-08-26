@@ -28,7 +28,7 @@ export const CONSULTATION_QUESTIONS_PAGE: ContentPage = {
     "이 글은 상담에서 참고할 수 있는 질문 예시를 정리한 일반적인 법률정보이며, 아래 항목은 예시일 뿐 사건마다 추가 질문이 필요할 수 있습니다. 답변 내용은 사실관계와 증거, 적용 법령에 따라 달라질 수 있습니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "consult-q-01",
     "consult-q-02",
@@ -85,7 +85,7 @@ export const CONSULTATION_QUESTIONS_PAGE: ContentPage = {
     title: "이혼상담에서 물어볼 질문은 무엇인가요? | 로펌가이드",
     description:
       "이혼상담에서 절차, 재산분할, 자녀, 비용, 담당체계까지 확인하면 좋은 질문을 정리합니다.",
-    keywords: ["이혼상담 질문", "이혼변호사 상담", "이혼전문변호사 상담", "이혼소송 상담"],
+    keywords: ["이혼상담 질문", "이혼변호사 상담", "이혼소송 상담", "상담 전 질문"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,

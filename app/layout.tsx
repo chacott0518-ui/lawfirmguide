@@ -13,7 +13,7 @@ import {
   DEFAULT_OG_IMAGE_HEIGHT,
   DEFAULT_OG_IMAGE_WIDTH,
 } from "@/lib/metadata";
-import { CANONICAL_SITE_ORIGIN } from "@/lib/site-url";
+import { CANONICAL_SITE_ORIGIN, absoluteUrl } from "@/lib/site-url";
 
 import "./globals.css";
 import "@/styles/header.css";
@@ -80,6 +80,13 @@ export const metadata: Metadata = {
     title: HOME_SEO.title,
     description: HOME_SEO.description,
     images: [DEFAULT_OG_IMAGE],
+  },
+
+  alternates: {
+    ...baseMetadata.alternates,
+    types: {
+      "application/rss+xml": absoluteUrl("/rss.xml"),
+    },
   },
 };
 

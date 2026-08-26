@@ -28,7 +28,7 @@ export const AFFAIR_EVIDENCE_CAUTION_PAGE: ContentPage = {
     "이 글은 위자료 관련 증거정리 시 주의할 점을 안내하는 일반적인 법률정보이며, 특정 증거수집 방법의 적법성을 개별적으로 판단하지 않습니다.",
   ],
   publishedAt: INFO_GUIDE_V2_PUBLISHED_AT,
-  updatedAt: INFO_GUIDE_V2_PUBLISHED_AT,
+  updatedAt: "2026-08-26",
   faqIds: [
     "affair-evidence-01",
     "affair-evidence-02",
@@ -85,7 +85,7 @@ export const AFFAIR_EVIDENCE_CAUTION_PAGE: ContentPage = {
     title: "위자료 관련 증거를 정리할 때, 무엇을 주의하나요? | 로펌가이드",
     description:
       "위자료 관련 증거를 정리할 때 적법한 수집 범위와 자료 관리 주의사항을 안내합니다.",
-    keywords: ["위자료 증거", "상간 증거", "불법 증거수집", "이혼전문변호사"],
+    keywords: ["위자료 증거", "상간 증거", "불법 증거수집"],
     ogImage: "/icon.svg",
     socialImage: "/icon.svg",
     category: SITE.categoryLabel,
