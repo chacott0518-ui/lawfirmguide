@@ -3,8 +3,24 @@ import type { NextRequest } from "next/server";
 
 import { LEGACY_REDIRECTS } from "@/config/routes";
 
+/** Location 등 HTTP 헤더용 — 한글 path를 percent-encoding */
+function toAsciiPathname(pathname: string): string {
+  return pathname
+    .split("/")
+    .map((segment) => {
+      if (!segment) return "";
+      try {
+        return encodeURIComponent(decodeURIComponent(segment));
+      } catch {
+        return encodeURIComponent(segment);
+      }
+    })
+    .join("/");
+}
+
 /**
  * 기존 단축 URL(/비용, /faq 등) → 새 한글 URL 308 permanent redirect.
+ * HTTP 헤더/쿠키에는 한글 raw 문자열을 넣지 않는다.
  */
 export function proxy(request: NextRequest) {
   let pathname = request.nextUrl.pathname;
@@ -18,7 +34,7 @@ export function proxy(request: NextRequest) {
   const target = LEGACY_REDIRECTS[pathname];
   if (target) {
     const url = request.nextUrl.clone();
-    url.pathname = target;
+    url.pathname = toAsciiPathname(target);
     return NextResponse.redirect(url, 308);
   }
 

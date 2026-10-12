@@ -16,7 +16,7 @@ export function ContentCardGrid({
   eyebrow = "CONTENT GUIDE",
   title = "이혼 법률정보 핵심 안내",
   description =
-    "협의이혼절차, 이혼소송비용, 상간소송, 재산분할과 후기 확인 기준까지 주제별로 정리했습니다.",
+    "상담 전 확인사항, 이혼 절차·준비서류, 재산분할, 양육권·친권, 위자료·상간, 소송 전 체크리스트를 주제별로 정리했습니다.",
 }: ContentCardGridProps) {
   return (
     <section className="cg-card-grid" aria-labelledby="content-card-grid-title">

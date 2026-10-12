@@ -15,6 +15,7 @@ const ACCENT_COLORS: Record<string, string> = {
   home:       "#F3E9D2",
   cost:       "#F9E0D2",
   reviews:    "#DCEFF5",
+  custodyConsultCheck: "#DCEFF5",
   precautions:"#E8F0CF",
   hospital:   "#D9EEE7",
   recovery:   "#E9E0F5",

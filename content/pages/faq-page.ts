@@ -196,7 +196,7 @@ export const FAQ_PAGE: ContentPage = {
         },
       },
       relatedHref: ROUTES.reviews,
-      relatedLabel: "이혼전문변호사 후기 확인 기준 보기",
+      relatedLabel: "후기 확인 기준 보기",
     },
     {
       id: "faq-progress-comm",

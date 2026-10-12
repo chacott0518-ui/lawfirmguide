@@ -7,7 +7,7 @@ import {
 } from "@/content/info/shared";
 import type { ContentPage } from "@/types/content";
 
-const media = TOPIC_MEDIA.recovery;
+const media = TOPIC_MEDIA.custodyConsultCheck;
 
 export const CUSTODY_CONSULT_CHECK_PAGE: ContentPage = {
   id: "custodyConsultCheck",

@@ -23,6 +23,6 @@ export const FAQ_HUB_CARD: FaqHubCardConfig = {
   title: "더 많은 질문이 있으신가요?",
   description:
     "협의이혼, 이혼소송비용, 재산분할, 상간소송, 양육비와 사실혼 관련 질문을 한곳에서 확인하세요.",
-  linkLabel: "이혼전문변호사 FAQ 전체 보기 →",
+  linkLabel: "상담 전 확인사항 전체 보기 →",
   href: ROUTES.faq,
 };

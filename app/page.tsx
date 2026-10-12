@@ -4,6 +4,7 @@ import "@/styles/home-editorial.css";
 import { PartnershipCTA } from "@/components/advertising/AdInquiryBanner";
 import { ArticleBody } from "@/components/content/ArticleBody";
 import { ArticleConclusion } from "@/components/content/ArticleConclusion";
+import { Breadcrumb } from "@/components/content/Breadcrumb";
 import { HomeContentCards } from "@/components/content/ContentCardGrid";
 import { FaqAccordion } from "@/components/content/FaqList";
 import { InfoGuideCards } from "@/components/content/InfoGuideCards";
@@ -14,7 +15,6 @@ import { RelatedPages } from "@/components/content/RelatedPages";
 import { ClinicMap } from "@/components/contact/ClinicMap";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { HOME_FEATURE_IMAGE, TOPIC_MEDIA } from "@/config/media";
-import { SITE } from "@/config/site";
 import { getFaqsByIds } from "@/content/faqs";
 import {
   HOME_CONCLUSION,
@@ -22,11 +22,13 @@ import {
   HOME_FAQ_IDS,
   HOME_INTRO,
   HOME_SECTIONS,
+  HOME_SEO,
   HOME_SOURCES,
   HOME_TOC,
 } from "@/content/pages/home";
 import {
   faqPageJsonLd,
+  homeBreadcrumbJsonLd,
   itemListJsonLd,
   organizationJsonLd,
   webPageJsonLd,
@@ -62,6 +64,7 @@ export default function HomePage() {
         <div className="cg-container">
           <div className="home-editorial">
             <header className="cg-home-page-intro">
+              <Breadcrumb items={[{ label: HOME_INTRO.h1 }]} />
               <p className="cg-home-page-intro__eyebrow">로펌가이드</p>
               <h1 id="home-hero-title" className="cg-home-page-intro__h1">
                 {HOME_INTRO.h1}
@@ -194,7 +197,7 @@ export default function HomePage() {
           websiteJsonLd(),
           webPageJsonLd({
             name: HOME_INTRO.h1,
-            description: SITE.tagline,
+            description: HOME_SEO.description,
             path: "/",
             image: "/icon.svg",
             type: "WebPage",
@@ -202,6 +205,7 @@ export default function HomePage() {
             dateModified: HOME_DATE_MODIFIED,
           }),
           itemListJsonLd(),
+          homeBreadcrumbJsonLd(),
           faqPageJsonLd(faqs, "/"),
         ]}
       />

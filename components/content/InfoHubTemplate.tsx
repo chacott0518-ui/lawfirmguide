@@ -90,7 +90,7 @@ export function InfoHubTemplate() {
           ) : null}
 
           <nav className="cg-info-hub-page__back" aria-label="메인으로 이동">
-            <Link href={ROUTES.home}>← 이혼전문변호사 메인으로 돌아가기</Link>
+            <Link href={ROUTES.home}>← 이혼전문변호사</Link>
           </nav>
         </div>
       </div>

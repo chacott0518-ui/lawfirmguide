@@ -85,7 +85,10 @@ export const metadata: Metadata = {
   alternates: {
     ...baseMetadata.alternates,
     types: {
-      "application/rss+xml": absoluteUrl("/rss.xml"),
+      "application/rss+xml": [
+        { url: absoluteUrl("/rss.xml"), title: "RSS" },
+        { url: absoluteUrl("/feed.xml"), title: "Feed" },
+      ],
     },
   },
 };

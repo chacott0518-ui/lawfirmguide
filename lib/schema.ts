@@ -76,19 +76,28 @@ export function webPageJsonLd(options: {
 }
 
 export function itemListJsonLd() {
+  const elements = CONTENT_CARDS.map((card, index) => ({
+    "@type": "ListItem" as const,
+    position: index + 1,
+    name: card.title,
+    url: absoluteUrl(card.href),
+    image: absoluteUrl(card.image.src),
+    description: card.description,
+  }));
+
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: `${SITE.name} 주요 콘텐츠`,
-    itemListElement: CONTENT_CARDS.map((card, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: card.title,
-      url: absoluteUrl(card.href),
-      image: absoluteUrl(card.image.src),
-      description: card.description,
-    })),
+    numberOfItems: elements.length,
+    itemListElement: elements,
   };
+}
+
+export function homeBreadcrumbJsonLd() {
+  return breadcrumbJsonLd([
+    { name: "이혼전문변호사", path: "/" },
+  ]);
 }
 
 export function breadcrumbJsonLd(

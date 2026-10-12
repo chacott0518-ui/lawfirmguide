@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { LineArrow } from "@/components/icons/EditorialMarks";
-import { ROUTES } from "@/config/routes";
+import { ROUTES, type RouteKey } from "@/config/routes";
 import { CONTENT_CARDS } from "@/lib/content-registry";
 import type { ContentPageId } from "@/types/content";
 
@@ -18,7 +18,7 @@ type RelatedLink = {
   label: string;
 };
 
-/** 하위페이지 → 메인("/") 문맥 앵커. 페이지마다 다른 문구를 사용하되 핵심어를 포함한다. */
+/** 하위페이지 → 메인("/") 문맥 앵커. primary/variant는 OWNER(/)로만 집중한다. */
 export const HOME_CONTEXT_ANCHOR: Record<ContentPageId, string> = {
   cost: "이혼전문변호사 전체 안내",
   recovery: "이혼변호사 선택 기준",
@@ -60,6 +60,12 @@ export const HOME_CONTEXT_ANCHOR: Record<ContentPageId, string> = {
   retainerAgreementCheck: "위임계약서 확인 정보",
 };
 
+function resolvePageHref(id?: ContentPageId): string | undefined {
+  if (!id) return undefined;
+  if (id in ROUTES) return ROUTES[id as RouteKey];
+  return undefined;
+}
+
 /**
  * 관련 콘텐츠 — 한 줄 버튼형 링크만 표시 (이미지·날짜·미리보기 없음).
  */
@@ -69,6 +75,7 @@ export function RelatedPages({
   variant,
 }: RelatedPagesProps) {
   const links: RelatedLink[] = [];
+  const pageHref = resolvePageHref(currentId);
 
   if (showAll) {
     for (const card of CONTENT_CARDS) {
@@ -84,7 +91,8 @@ export function RelatedPages({
       label: homeLabel,
     });
     for (const card of CONTENT_CARDS) {
-      if (card.id === currentId) continue;
+      // card.id와 실제 페이지 URL이 어긋날 수 있어 href 기준으로 현재 페이지를 제외한다.
+      if (pageHref && card.href === pageHref) continue;
       links.push({ id: card.id, href: card.href, label: card.title });
     }
   }

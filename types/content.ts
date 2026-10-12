@@ -15,6 +15,12 @@ export type ContentClusterId =
   | "faq"
   | "faqHub";
 
+/**
+ * HOME 6카드·GNB에 올 수 있는 id.
+ * 기존 200 InfoGuide(양육권)를 카드 슬롯에 쓸 때 ContentClusterId와 분리한다.
+ */
+export type HomeCardId = ContentClusterId | "custodyConsultCheck";
+
 /** 핵심 카드·GNB 밖의 법률정보 가이드 */
 export type InfoGuideId =
   | "consultPrep"
@@ -154,7 +160,7 @@ export type ArticleSection = {
 };
 
 export type ContentCard = {
-  id: ContentClusterId;
+  id: HomeCardId;
   order: number;
   numberLabel: string;
   href: string;
@@ -166,7 +172,7 @@ export type ContentCard = {
   shortTitle: string;
   /** 카드 메타에 표시할 짧은 라벨 (예: 수술비용) */
   cardMetaLabel: string;
-  iconKey: ContentClusterId;
+  iconKey: HomeCardId;
   /** 긴 설명 (메가메뉴 등) */
   description: string;
   /** PC 카드 요약 */

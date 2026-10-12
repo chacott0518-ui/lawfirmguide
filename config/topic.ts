@@ -1,12 +1,12 @@
-import type { ClayAccent, ContentClusterId } from "@/types/content";
+import type { ClayAccent, HomeCardId } from "@/types/content";
 
 export type MenuItemConfig = {
-  id: ContentClusterId | "home" | "infoHub";
+  id: HomeCardId | "home" | "infoHub";
   order: number;
   numberLabel: string;
   title: string;
   description: string;
-  iconKey: ContentClusterId | "home";
+  iconKey: HomeCardId | "home";
   accent: ClayAccent;
   href?: string;
 };
@@ -32,6 +32,7 @@ export const topicConfig = {
       precautions: "neutral" as ClayAccent,
       hospital: "neutral" as ClayAccent,
       reviews: "neutral" as ClayAccent,
+      custodyConsultCheck: "neutral" as ClayAccent,
       faq: "neutral" as ClayAccent,
     },
   },
@@ -47,57 +48,57 @@ export const topicConfig = {
       href: "/",
     },
     {
-      id: "cost",
+      id: "faq",
       order: 1,
       numberLabel: "01",
-      title: "협의이혼 절차",
+      title: "이혼 상담 전 확인사항",
+      description: "상담·비용·선임 전 확인할 질문 정리",
+      iconKey: "faq",
+      accent: "neutral",
+    },
+    {
+      id: "cost",
+      order: 2,
+      numberLabel: "02",
+      title: "이혼 절차와 준비서류",
       description: "신청 전 서류·합의·숙려기간 확인",
       iconKey: "cost",
       accent: "neutral",
     },
     {
-      id: "recovery",
-      order: 2,
-      numberLabel: "02",
-      title: "이혼소송 비용",
-      description: "보수·인지액·송달료와 부대비용 확인",
-      iconKey: "recovery",
-      accent: "neutral",
-    },
-    {
-      id: "precautions",
+      id: "hospital",
       order: 3,
       numberLabel: "03",
-      title: "상간소송 변호사",
-      description: "청구 요건·증거·절차 확인 기준",
-      iconKey: "precautions",
-      accent: "neutral",
-    },
-    {
-      id: "hospital",
-      order: 4,
-      numberLabel: "04",
-      title: "이혼 재산분할",
+      title: "재산분할 판단 기준",
       description: "대상 재산·기여도·채무 확인 기준",
       iconKey: "hospital",
       accent: "neutral",
     },
     {
-      id: "reviews",
-      order: 5,
-      numberLabel: "05",
-      title: "이혼전문변호사 후기",
-      description: "후기 확인과 선임 전 체크 기준",
-      iconKey: "reviews",
+      id: "custodyConsultCheck",
+      order: 4,
+      numberLabel: "04",
+      title: "양육권·친권 판단 기준",
+      description: "친권·양육자 지정 전 확인사항",
+      iconKey: "custodyConsultCheck",
       accent: "neutral",
     },
     {
-      id: "faq",
+      id: "precautions",
+      order: 5,
+      numberLabel: "05",
+      title: "위자료·상간 쟁점",
+      description: "청구 요건·증거·절차 확인 기준",
+      iconKey: "precautions",
+      accent: "neutral",
+    },
+    {
+      id: "recovery",
       order: 6,
       numberLabel: "06",
-      title: "이혼전문변호사 FAQ",
-      description: "상담·비용·선임 전 확인할 질문 정리",
-      iconKey: "faq",
+      title: "이혼 소송 전 체크리스트",
+      description: "보수·인지액·송달료와 부대비용 확인",
+      iconKey: "recovery",
       accent: "neutral",
     },
     {
@@ -118,6 +119,7 @@ export const topicConfig = {
     precautions: ["상간녀소송변호사", "상간자소송", "상간남소송", "상간소송"],
     hospital: ["이혼소송 재산분할", "재산분할", "위자료", "이혼사유"],
     reviews: ["이혼전문변호사 후기", "이혼변호사 후기", "변호사 선임 기준"],
+    custodyConsultCheck: ["양육권", "친권", "양육자 지정", "자녀 복리"],
     faq: ["이혼 FAQ", "양육비", "친권", "사실혼 기준"],
     faqHub: ["이혼 FAQ", "협의이혼절차", "이혼소송비용"],
   },

@@ -6,7 +6,7 @@ export const siteEntity: SiteEntity = {
   name: "로펌가이드",
   type: "WebSite",
   description:
-    "이혼전문변호사 선택 전 확인할 협의이혼절차, 이혼소송비용, 상간소송, 재산분할과 후기 확인 기준을 주제별로 정리한 법률정보 안내 사이트",
+    "이혼전문변호사 상담이 필요한 상황, 협의이혼·재판상 이혼 절차, 재산분할·양육권·위자료 판단 기준을 정리한 법률정보 안내 사이트",
   logo: "/icon.svg",
   language: topicConfig.locale,
 };

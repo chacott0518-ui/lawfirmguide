@@ -1,9 +1,9 @@
-import type { ContentClusterId, ContentImage } from "@/types/content";
+import type { ContentImage, HomeCardId } from "@/types/content";
 
-export type MenuIconKey = ContentClusterId | "home";
+export type MenuIconKey = HomeCardId | "home";
 
 export type TopicMedia = {
-  id: ContentClusterId;
+  id: HomeCardId;
   thumbnail: ContentImage;
   secondaryImage: ContentImage;
   imageAlt: string;
@@ -13,8 +13,18 @@ export type TopicMedia = {
   mobileCardDescription: string;
 };
 
+/** 한글 경로를 percent-encoding 해 Link/preload 헤더 ByteString 오류를 방지한다. 파일명은 변경하지 않는다. */
+function toPublicSrc(src: string): string {
+  if (!src || src.startsWith("data:") || /^https?:\/\//i.test(src)) return src;
+  try {
+    return encodeURI(decodeURI(src));
+  } catch {
+    return encodeURI(src);
+  }
+}
+
 function img(src: string, alt: string, w: number, h: number): ContentImage {
-  return { src, alt, width: w, height: h };
+  return { src: toPublicSrc(src), alt, width: w, height: h };
 }
 
 const THUMB = "/images/로펌가이드/썸네일";
@@ -31,7 +41,7 @@ const ACCENT_HOVER = "#B98A18";
  */
 const PROPERTY_THUMB_FALLBACK = `${THUMB}/메인-이혼전문변호사-정사각썸네일.webp`;
 
-export const TOPIC_MEDIA: Record<ContentClusterId, TopicMedia> = {
+export const TOPIC_MEDIA: Record<HomeCardId, TopicMedia> = {
   cost: {
     id: "cost",
     imageAlt: "협의이혼 절차 안내 썸네일",
@@ -114,60 +124,81 @@ export const TOPIC_MEDIA: Record<ContentClusterId, TopicMedia> = {
   },
   reviews: {
     id: "reviews",
-    imageAlt: "이혼전문변호사 후기 확인 안내 썸네일",
-    secondaryImageAlt: "이혼전문변호사 후기 확인 본문 이미지",
+    imageAlt: "후기 확인 기준 안내 썸네일",
+    secondaryImageAlt: "후기 확인 기준 본문 이미지",
     accentColor: ACCENT,
     accentHoverColor: ACCENT_HOVER,
     mobileCardDescription: "후기 확인 포인트",
     thumbnail: img(
       `${THUMB}/이혼전문변호사후기-썸네일.webp`,
-      "이혼전문변호사 후기 확인 안내 썸네일",
+      "후기 확인 기준 안내 썸네일",
       CARD_W,
       CARD_H,
     ),
     secondaryImage: img(
       `${THUMB}/이혼전문변호사후기-썸네일.webp`,
-      "이혼전문변호사 후기 확인 본문 이미지",
+      "후기 확인 기준 본문 이미지",
+      CARD_W,
+      CARD_H,
+    ),
+  },
+  /** 양육권 전용 썸네일 파일 없음 — 기존 비용 썸네일 재사용(파일 rename 금지) */
+  custodyConsultCheck: {
+    id: "custodyConsultCheck",
+    imageAlt: "양육권·친권 판단 기준 안내 썸네일",
+    secondaryImageAlt: "양육권·친권 상담 전 확인사항 본문 이미지",
+    accentColor: ACCENT,
+    accentHoverColor: ACCENT_HOVER,
+    mobileCardDescription: "친권·양육자 지정 전 확인",
+    thumbnail: img(
+      `${THUMB}/이혼소송비용-썸네일.webp`,
+      "양육권·친권 판단 기준 안내 썸네일",
+      CARD_W,
+      CARD_H,
+    ),
+    secondaryImage: img(
+      `${THUMB}/이혼소송비용-썸네일.webp`,
+      "양육권·친권 상담 전 확인사항 본문 이미지",
       CARD_W,
       CARD_H,
     ),
   },
   faq: {
     id: "faq",
-    imageAlt: "이혼전문변호사 FAQ 안내 썸네일",
-    secondaryImageAlt: "이혼전문변호사 FAQ 본문 이미지",
+    imageAlt: "이혼 상담 전 확인사항 안내 썸네일",
+    secondaryImageAlt: "이혼 상담 전 확인사항 본문 이미지",
     accentColor: ACCENT,
     accentHoverColor: ACCENT_HOVER,
     mobileCardDescription: "상담·선임 전 확인할 질문 모음",
     thumbnail: img(
       `${THUMB}/이혼-FAQ-썸네일.webp`,
-      "이혼전문변호사 FAQ 안내 썸네일",
+      "이혼 상담 전 확인사항 안내 썸네일",
       CARD_W,
       CARD_H,
     ),
     secondaryImage: img(
       `${THUMB}/이혼-FAQ-썸네일.webp`,
-      "이혼전문변호사 FAQ 본문 이미지",
+      "이혼 상담 전 확인사항 본문 이미지",
       CARD_W,
       CARD_H,
     ),
   },
   faqHub: {
     id: "faqHub",
-    imageAlt: "이혼전문변호사 FAQ 안내 썸네일",
-    secondaryImageAlt: "이혼전문변호사 FAQ 본문 이미지",
+    imageAlt: "이혼 상담 FAQ 안내 썸네일",
+    secondaryImageAlt: "이혼 상담 FAQ 본문 이미지",
     accentColor: ACCENT,
     accentHoverColor: ACCENT_HOVER,
     mobileCardDescription: "상담·선임 전 확인할 질문 모음",
     thumbnail: img(
       `${THUMB}/이혼-FAQ-썸네일.webp`,
-      "이혼전문변호사 FAQ 안내 썸네일",
+      "이혼 상담 FAQ 안내 썸네일",
       CARD_W,
       CARD_H,
     ),
     secondaryImage: img(
       `${THUMB}/이혼-FAQ-썸네일.webp`,
-      "이혼전문변호사 FAQ 본문 이미지",
+      "이혼 상담 FAQ 본문 이미지",
       CARD_W,
       CARD_H,
     ),
@@ -193,7 +224,7 @@ export const HOME_FEATURE_IMAGE: ContentImage = img(
 /** 카카오톡/OG 공유 대표 이미지 (실제 파일 크기 1731x909) */
 export const HOME_OG_IMAGE: ContentImage = img(
   `${THUMB}/메인-이혼전문변호사-와이드.webp`,
-  "이혼전문변호사, 어떤 기준으로 확인해야 할까요? | 로펌가이드",
+  "이혼전문변호사 | 이혼 상담·절차·재산분할 기준 - 로펌가이드",
   1731,
   909,
 );
@@ -211,10 +242,16 @@ export const MENU_ICON_IMAGES: Record<MenuIconKey, ContentImage> = {
   precautions: img(`${EMOJI}/상간녀소송변호사-이모티콘.webp`, "", 512, 512),
   hospital: img(`${EMOJI}/이혼소송재산분할-이모티콘.webp`, "", 512, 512),
   reviews: img(`${EMOJI}/이혼전문변호사후기-이모티콘.webp`, "", 512, 512),
+  custodyConsultCheck: img(
+    `${EMOJI}/이혼소송비용-이모티콘.webp`,
+    "",
+    512,
+    512,
+  ),
   faq: img(`${EMOJI}/이혼-FAQ-이모티콘.webp`, "", 512, 512),
   faqHub: img(`${EMOJI}/이혼-FAQ-이모티콘.webp`, "", 512, 512),
 };
 
-export function getTopicMedia(id: ContentClusterId): TopicMedia {
+export function getTopicMedia(id: HomeCardId): TopicMedia {
   return TOPIC_MEDIA[id];
 }
