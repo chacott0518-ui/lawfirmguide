@@ -16,7 +16,7 @@ export const CONTACT: ContactConfig = {
   formLabel: "문의하기",
   clinicName: "제휴 로펌",
   address: "",
-  locationNote: "제휴 로펌 위치 안내 예정",
+  locationNote: "제휴 확정 후 위치 안내 예정",
   naverMapUrl: "",
   googleMapsEmbedUrl: "",
 };

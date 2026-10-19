@@ -38,7 +38,7 @@ import {
 /** sitemap/RSS·JSON-LD published 기준일 — publishedAt 변경 금지 */
 const HOME_DATE_PUBLISHED = "2026-07-31";
 /** 이번 본문·DOM 최적화 반영일 */
-const HOME_DATE_MODIFIED = "2026-08-26";
+const HOME_DATE_MODIFIED = "2026-10-19";
 
 export default function HomePage() {
   const faqs = getFaqsByIds([...HOME_FAQ_IDS]);
@@ -74,6 +74,9 @@ export default function HomePage() {
               </p>
             </header>
 
+            {/* 네이버 목차카드 입력값 — H1 직후, 인트로 안내문보다 위 */}
+            <HomeContentCards />
+
             <div className="cg-home-intro-card">
               <div className="cg-home-intro-card__main">
                 <header className="cg-page__header cg-home__header">
@@ -95,20 +98,23 @@ export default function HomePage() {
                   먼저 확인할 주제
                 </p>
                 <ul className="cg-home-intro-card__index-list">
-                  {HOME_TOC.slice(0, 5).map((item) => (
-                    <li key={item.id}>
-                      <a href={`#${item.id}`}>
-                        {item.numberLabel ? (
-                          <span className="cg-home-intro-card__index-num">
-                            {item.numberLabel}
+                  {/* 본문 섹션 앵커 6개(home-*) — FAQ(#faq)는 아래 PageTocCards·FaqAccordion에서 연결 */}
+                  {HOME_TOC.filter((item) => item.id.startsWith("home-")).map(
+                    (item) => (
+                      <li key={item.id}>
+                        <a href={`#${item.id}`}>
+                          {item.numberLabel ? (
+                            <span className="cg-home-intro-card__index-num">
+                              {item.numberLabel}
+                            </span>
+                          ) : null}
+                          <span className="cg-home-intro-card__index-label-text">
+                            {item.label}
                           </span>
-                        ) : null}
-                        <span className="cg-home-intro-card__index-label-text">
-                          {item.label}
-                        </span>
-                      </a>
-                    </li>
-                  ))}
+                        </a>
+                      </li>
+                    ),
+                  )}
                 </ul>
               </aside>
             </div>
@@ -144,8 +150,6 @@ export default function HomePage() {
 
             <RelatedPages showAll variant="editorial" />
           </div>
-
-          <HomeContentCards />
 
           <InfoGuideCards />
 

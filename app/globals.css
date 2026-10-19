@@ -115,11 +115,12 @@
   --cg-type-body-lh: 1.7;
   --cg-type-body-weight: 400;
 
-  --cg-type-card-title: 13px;
+  --cg-type-card-title: 13.5px;
   --cg-type-card-title-lh: 1.45;
   --cg-type-card-title-weight: 600;
 
-  --cg-type-card-body: 12px;
+  /* 모바일 한글 카드 설명 가독성 — 과도히 작지 않게 */
+  --cg-type-card-body: 12.5px;
   --cg-type-card-body-lh: 1.55;
 
   --cg-type-caption: 11px;
