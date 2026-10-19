@@ -85,8 +85,9 @@
   --cg-panel-hospital: var(--lg-surface-soft);
   --cg-panel-default: var(--lg-surface-soft);
 
-  --font-ko: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
-    system-ui, sans-serif;
+  /* 모바일: 시스템 한글 스택 우선(2MB Pretendard 초기 차단). 크기/위계 토큰은 유지 */
+  --font-ko: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", "Segoe UI", system-ui, sans-serif;
 
   /*
    * 타이포그래피 위계 (모바일 우선 → PC는 min-width: 900px에서 덮어씀)
@@ -168,6 +169,28 @@
 @media (min-width: 768px) and (max-width: 1024px) {
   :root {
     --cg-header-pad: 24px;
+  }
+}
+
+/*
+ * 데스크탑만 Pretendard Variable 허용 — 모바일 first paint 요청 금지.
+ * PretendardVariable-ko.woff2: 사이트 사용 글리프 + wght 400–700 축 축소 subset (~108KB).
+ * 원본 PretendardVariable.woff2(2.06MB)는 보관·라이선스용으로 유지, 런타임 미요청.
+ * font-display:optional — 지연 로드 시 시스템 폴백 유지(스왑 CLS 방지). preload 없음.
+ */
+@media (min-width: 768px) {
+  @font-face {
+    font-family: "Pretendard Variable";
+    src: url("/fonts/PretendardVariable-ko.woff2") format("woff2-variations");
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: optional;
+  }
+
+  :root {
+    --font-ko: "Pretendard Variable", Pretendard, -apple-system,
+      BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic",
+      "Segoe UI", system-ui, sans-serif;
   }
 }
 
@@ -3829,6 +3852,15 @@ img {
   overflow: hidden;
   background: var(--cg-neutral);
   max-width: 100%;
+  position: relative;
+}
+
+.cg-topic-guide__media-ph {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  background: var(--cg-neutral);
 }
 
 .cg-topic-guide__media img {

@@ -11,10 +11,8 @@ import { FaqAccordion } from "@/components/content/FaqList";
 import { KeySummaryCards } from "@/components/content/KeySummaryCards";
 import { LongGuideImage } from "@/components/content/LongGuideImage";
 import { OfficialSourcesAccordion } from "@/components/content/OfficialSourcesAccordion";
-import {
-  PageTocCards,
-  SectionTocCards,
-} from "@/components/content/PageTocCards";
+import { SectionTocCards } from "@/components/content/PageTocCards";
+import { TopicGuideCards } from "@/components/content/TopicGuideCards";
 import { RelatedArticleLink } from "@/components/content/RelatedArticleLink";
 import {
   HOME_CONTEXT_ANCHOR,
@@ -177,7 +175,7 @@ export function ArticleTemplate({ page }: ArticleTemplateProps) {
           ) : null}
 
           {showContentCards ? (
-            <PageTocCards activeHref={page.href} />
+            <TopicGuideCards activeHref={page.href} />
           ) : null}
 
           {showContentCards ? (

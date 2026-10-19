@@ -164,7 +164,7 @@ export default function HomePage() {
                 alt={heroImage.alt}
                 width={heroImage.width}
                 height={heroImage.height}
-                priority
+                loading="lazy"
                 sizes="(max-width: 768px) 100vw, 1120px"
                 className="cg-home-hero__img"
               />

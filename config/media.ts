@@ -29,8 +29,9 @@ function img(src: string, alt: string, w: number, h: number): ContentImage {
 
 const THUMB = "/images/로펌가이드/썸네일";
 const EMOJI = "/images/로펌가이드/이모티콘";
-const CARD_W = 1254;
-const CARD_H = 1254;
+/** 디스플레이·전송 최적화 후 실제 썸네일 치수(URL/파일명 불변) */
+const CARD_W = 900;
+const CARD_H = 900;
 
 const ACCENT = "#D3A62B";
 const ACCENT_HOVER = "#B98A18";
@@ -209,8 +210,8 @@ export const TOPIC_MEDIA: Record<HomeCardId, TopicMedia> = {
 export const HOME_WIDE_IMAGE: ContentImage = img(
   `${THUMB}/메인-이혼전문변호사-와이드.webp`,
   "이혼 절차와 비용 안내를 담은 와이드 대표 이미지",
-  1731,
-  909,
+  1280,
+  672,
 );
 
 /** 메인·상세 정사각 대표 썸네일 */
@@ -221,12 +222,12 @@ export const HOME_FEATURE_IMAGE: ContentImage = img(
   CARD_H,
 );
 
-/** 카카오톡/OG 공유 대표 이미지 (실제 파일 크기 1731x909) */
+/** 카카오톡/OG 공유 대표 이미지 (경로 불변, 실제 파일 1280×672) */
 export const HOME_OG_IMAGE: ContentImage = img(
   `${THUMB}/메인-이혼전문변호사-와이드.webp`,
   "이혼전문변호사 | 이혼 상담·절차·재산분할 기준 - 로펌가이드",
-  1731,
-  909,
+  1280,
+  672,
 );
 
 /** 메뉴·카드 이모티콘 (장식용) */

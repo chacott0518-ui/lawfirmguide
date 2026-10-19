@@ -17,14 +17,12 @@ import { CANONICAL_SITE_ORIGIN, absoluteUrl } from "@/lib/site-url";
 
 import "./globals.css";
 import "@/styles/header.css";
-import localFont from "next/font/local";
 
-const pretendard = localFont({
-  src: "../public/fonts/PretendardVariable.woff2",
-  display: "swap",
-  weight: "45 920",
-  variable: "--font-ko",
-});
+/**
+ * Pretendard는 CSS @font-face(min-width:768px, font-display:optional)로만 로드한다.
+ * 런타임은 PretendardVariable-ko.woff2(사이트 글리프 subset)만 요청한다.
+ * next/font/local preload는 사용하지 않는다.
+ */
 
 const baseMetadata = buildPageMetadata({
   seo: HOME_SEO,
@@ -99,7 +97,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" className={pretendard.variable}>
+    <html lang="ko">
       <body>
         <a href="#main-content" className="skip-link">
           본문 바로가기

@@ -1,5 +1,5 @@
 import { ContentCard } from "@/components/content/ContentCard";
-import { PageTocCards } from "@/components/content/PageTocCards";
+import { TopicGuideCards } from "@/components/content/TopicGuideCards";
 import { CONTENT_CARDS } from "@/lib/content-registry";
 
 type ContentCardGridProps = {
@@ -45,7 +45,7 @@ export function ContentCardGrid({
   );
 }
 
-/** 메인 상단 목차 — PageTocCards와 동일한 콘텐츠형 카드 */
+/** 메인 상단 6카드 — 서버 컴포넌트 TopicGuideCards */
 export function HomeContentCards() {
-  return <PageTocCards />;
+  return <TopicGuideCards />;
 }
